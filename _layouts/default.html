@@ -52,6 +52,10 @@
                 <h3>Contact</h3>
                 <p>Feedback or Inquiries:<br>
                 <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+                {% if site.x_username %}
+                <p>Find us on X:<br>
+                <strong>𝕏:</strong> <a href="https://x.com/{{ site.x_username }}" target="_blank">@{{ site.x_username }}</a></p>
+                {% endif %}
             </div>
         </sidebar>
     </div>
