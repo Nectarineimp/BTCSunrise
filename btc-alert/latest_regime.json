@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788469451,
-  "price": 81349.3,
+  "timestamp": 1788469751,
+  "price": 81285.9,
   "poc": 81450.0,
   "vah": 81550.0,
   "val": 81350.0,
-  "spot_cvd": -4.9421,
-  "perp_cvd": 26.078,
-  "divergence": -31.0201,
+  "spot_cvd": -33.9199,
+  "perp_cvd": -126.28,
+  "divergence": 92.3601,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Aggressive perpetual CVD buying is failing to lift price as spot CVD remains negative and price trades below Value Area Low. This heavy derivative-driven divergence below value increases the risk of a long-liquidation squeeze due to a lack of spot participation.",
-  "risk": "Cascading long liquidations if price fails to reclaim VAL at 81350."
+  "summary": "Price testing liquidity below VAL at $81,285.90. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($81,450.00)."
 }
