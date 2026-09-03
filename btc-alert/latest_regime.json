@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788459236,
-  "price": 81297.1,
+  "timestamp": 1788459536,
+  "price": 81243.3,
   "poc": 81050.0,
   "vah": 81150.0,
-  "val": 81000.0,
-  "spot_cvd": 21.1864,
-  "perp_cvd": 58.499,
-  "divergence": -37.3126,
+  "val": 80950.0,
+  "spot_cvd": -27.4875,
+  "perp_cvd": -1.634,
+  "divergence": -25.8535,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price testing liquidity above VAH at $81,297.10. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($81,050.00)."
+  "uncertainty": "High",
+  "summary": "Bitcoin has pushed above the Value Area High ($81,150) on heavy derivative volume, but persistent negative Spot CVD (-24.2) indicates spot sellers are unloading into the rally. Without aggressive spot buyer confirmation, this expansion above value lacks structural support and is vulnerable to a sharp mean-reversion move.",
+  "risk": "Lack of spot bid support leading to a rejection back inside the Value Area toward POC ($81,050)."
 }
