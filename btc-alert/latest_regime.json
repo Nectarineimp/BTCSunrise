@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788436721,
-  "price": 77977.4,
-  "poc": 77850.0,
+  "timestamp": 1788437021,
+  "price": 77939.19,
+  "poc": 77900.0,
   "vah": 77950.0,
   "val": 77850.0,
-  "spot_cvd": 3.5564,
-  "perp_cvd": 52.133,
-  "divergence": -48.5766,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "spot_cvd": -5.9725,
+  "perp_cvd": 60.215,
+  "divergence": -66.1875,
+  "regime": "Mean Reverting / Consolidation",
   "uncertainty": "High",
-  "summary": "Price is attempting an extension above VAH at 77950, but the move is almost entirely driven by derivative leverage rather than organic spot demand. Without spot CVD confirmation, this breakout lacks structural support and carries a significant risk of a long liquidation cascade back into the Value Area.",
-  "risk": "Absence of spot volume confirmation leaving derivative-driven longs vulnerable to a sharp unwind toward POC at 77850."
+  "summary": "Price rotating inside Value Area near POC ($77,900.00). Spot CVD delta is negative (-5.97 BTC).",
+  "risk": "Range chop between VAL ($77,850.00) and VAH ($77,950.00)."
 }
