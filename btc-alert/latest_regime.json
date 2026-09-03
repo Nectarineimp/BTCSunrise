@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788436421,
-  "price": 77891.5,
+  "timestamp": 1788436721,
+  "price": 77977.4,
   "poc": 77850.0,
-  "vah": 77900.0,
+  "vah": 77950.0,
   "val": 77850.0,
-  "spot_cvd": 0,
-  "perp_cvd": -0.067,
-  "divergence": 0.067,
-  "regime": "Consolidation",
+  "spot_cvd": 3.5564,
+  "perp_cvd": 52.133,
+  "divergence": -48.5766,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "High",
-  "summary": "",
-  "risk": ""
+  "summary": "Price is attempting an extension above VAH at 77950, but the move is almost entirely driven by derivative leverage rather than organic spot demand. Without spot CVD confirmation, this breakout lacks structural support and carries a significant risk of a long liquidation cascade back into the Value Area.",
+  "risk": "Absence of spot volume confirmation leaving derivative-driven longs vulnerable to a sharp unwind toward POC at 77850."
 }
