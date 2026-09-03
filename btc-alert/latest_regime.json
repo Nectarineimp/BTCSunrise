@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788449635,
-  "price": 80560.8,
+  "timestamp": 1788449935,
+  "price": 80719.3,
   "poc": 79650.0,
   "vah": 80450.0,
-  "val": 78950.0,
-  "spot_cvd": 6.1139,
-  "perp_cvd": 52.733,
-  "divergence": -46.6191,
+  "val": 79300.0,
+  "spot_cvd": 55.5141,
+  "perp_cvd": 34.387,
+  "divergence": 21.1271,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has accepted above VAH despite aggressive perpetual selling, indicating passive absorption of short positions and a leverage-driven squeeze. Weak spot volume relative to heavy perpetual turnover suggests fragile breakout conviction that relies on continued short-side liquidation flow.",
-  "risk": "Loss of VAH support at 80,400 leading to a rapid mean-reversion back into the Value Area toward the POC at 79,650."
+  "summary": "Price testing liquidity above VAH at $80,719.30. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($79,650.00)."
 }
