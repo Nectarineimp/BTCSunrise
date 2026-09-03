@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788448127,
-  "price": 79586.8,
+  "timestamp": 1788448435,
+  "price": 80396.0,
   "poc": 79650.0,
-  "vah": 79900.0,
+  "vah": 79950.0,
   "val": 78900.0,
-  "spot_cvd": 46.6163,
-  "perp_cvd": 8.917,
-  "divergence": 37.6993,
-  "regime": "Mean Reverting / Consolidation",
-  "uncertainty": "High",
-  "summary": "Price rotating inside Value Area near POC ($79,650.00). Spot CVD delta is positive (+46.62 BTC).",
-  "risk": "Range chop between VAL ($78,900.00) and VAH ($79,900.00)."
+  "spot_cvd": 44.5214,
+  "perp_cvd": -52.982,
+  "divergence": 97.5034,
+  "regime": "Spot-Led Expansion",
+  "uncertainty": "Low",
+  "summary": "Price has acceptance above the Value Area High supported by steady spot buying despite aggressive perpetual shorting. This spot-led delta divergence confirms genuine spot demand driving price discovery outside the value area.",
+  "risk": "Breakdown below VAH at 79,950 triggering a trapped breakout and mean reversion toward the POC at 79,650."
 }
