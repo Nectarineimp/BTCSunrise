@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788450535,
-  "price": 80856.21,
+  "timestamp": 1788450835,
+  "price": 80887.1,
   "poc": 80400.0,
   "vah": 80800.0,
-  "val": 80350.0,
-  "spot_cvd": 50.9779,
-  "perp_cvd": -128.8,
-  "divergence": 179.7779,
-  "regime": "Spot-Led Expansion",
+  "val": 80400.0,
+  "spot_cvd": 52.5608,
+  "perp_cvd": -199.903,
+  "divergence": 252.4638,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Spot buying delta is actively driving price expansion above the Value Area High despite aggressive perpetual short selling. This positive spot CVD divergence establishes a short-term bullish bias, provided spot accumulation continues to absorb derivative overhead.",
-  "risk": "Loss of spot buying momentum triggering an immediate mean-reversion re-entry inside the Value Area below 80,800 VAH."
+  "summary": "Price testing liquidity above VAH at $80,887.10. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($80,400.00)."
 }
