@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788458936,
-  "price": 81247.8,
+  "timestamp": 1788459236,
+  "price": 81297.1,
   "poc": 81050.0,
   "vah": 81150.0,
   "val": 81000.0,
-  "spot_cvd": 32.5896,
-  "perp_cvd": -11.64,
-  "divergence": 44.2296,
-  "regime": "Spot-Led Expansion",
-  "uncertainty": "Low",
-  "summary": "Aggressive spot accumulation is driving price expansion above the Value Area High despite persistent derivative shorting. This strong spot-led CVD divergence confirms high organic conviction, establishing a firm bullish bias above 81,150.",
-  "risk": "Acceptance back inside the value area below 81,150 triggering a mean-reverting rotation toward the 81,050 POC."
+  "spot_cvd": 21.1864,
+  "perp_cvd": 58.499,
+  "divergence": -37.3126,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "uncertainty": "Medium",
+  "summary": "Price testing liquidity above VAH at $81,297.10. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($81,050.00)."
 }
