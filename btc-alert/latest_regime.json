@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788440622,
-  "price": 78446.7,
+  "timestamp": 1788440922,
+  "price": 78508.6,
   "poc": 78300.0,
   "vah": 78400.0,
   "val": 77950.0,
-  "spot_cvd": 76.8451,
-  "perp_cvd": 386.964,
-  "divergence": -310.1189,
+  "spot_cvd": 86.3713,
+  "perp_cvd": 529.014,
+  "divergence": -442.6427,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price testing liquidity above VAH at $78,446.70. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($78,300.00)."
+  "uncertainty": "High",
+  "summary": "Price has expanded above the Value Area High driven overwhelmingly by derivative volume and perpetual CVD, while spot CVD shows negligible participation. This severe spot-to-perp CVD divergence indicates a fragile, leverage-fueled breakout vulnerable to exhaustion if spot buying fails to materialize.",
+  "risk": "Lack of spot bid follow-through triggering a sharp long liquidation flush back into the value area below 78,400."
 }
