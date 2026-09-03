@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788445726,
-  "price": 79395.1,
+  "timestamp": 1788446026,
+  "price": 79616.5,
   "poc": 78900.0,
-  "vah": 79050.0,
+  "vah": 79100.0,
   "val": 78700.0,
-  "spot_cvd": 54.073,
-  "perp_cvd": -59.005,
-  "divergence": 113.078,
-  "regime": "Spot-Led Expansion",
+  "spot_cvd": 58.9217,
+  "perp_cvd": 34.214,
+  "divergence": 24.7077,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price is expanding above VAH driven by positive spot CVD delta despite aggressive derivative selling, indicating authentic spot-led absorption. A failure to hold acceptance above 79,050 VAH risks a swift mean-reversion move back inside the value area.",
-  "risk": "Perp short-side aggression overwhelming spot bid density and pushing price back inside the Value Area (79,050)."
+  "summary": "Price testing liquidity above VAH at $79,616.50. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($78,900.00)."
 }
