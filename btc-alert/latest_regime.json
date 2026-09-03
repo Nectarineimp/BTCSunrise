@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788462550,
-  "price": 81405.8,
+  "timestamp": 1788462850,
+  "price": 81394.69,
   "poc": 81200.0,
-  "vah": 81400.0,
-  "val": 80950.0,
-  "spot_cvd": 18.157,
-  "perp_cvd": -57.581,
-  "divergence": 75.738,
-  "regime": "Absorption at Resistance",
+  "vah": 81500.0,
+  "val": 81000.0,
+  "spot_cvd": 31.8608,
+  "perp_cvd": 125.717,
+  "divergence": -93.8561,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Spot demand is actively absorbing aggressive perpetual short positioning as price pushes marginally above Value Area High at 81,400. Continued spot inflow is required to validate acceptance above VAH and avoid a mean-reverting rejection.",
-  "risk": "Acceptance failure above VAH (81,400) triggering perp-led aggressive selling back toward the POC at 81,200."
+  "summary": "Price is attempting an extension above the Value Area High driven primarily by aggressive perpetual buying, while spot cumulative volume delta lags significantly. The heavy reliance on derivatives volume raises the risk of long exhaustion and a quick mean-reversion back inside the value area.",
+  "risk": "Perp-led breakout failing due to lack of spot bid support, risking a sudden liquidation cascade back toward the 81,200 POC."
 }
