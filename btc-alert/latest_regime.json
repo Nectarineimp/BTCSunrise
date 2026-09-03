@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788444826,
-  "price": 78851.1,
-  "poc": 78450.0,
-  "vah": 78850.0,
-  "val": 78400.0,
-  "spot_cvd": -29.6776,
-  "perp_cvd": -270.103,
-  "divergence": 240.4254,
+  "timestamp": 1788445126,
+  "price": 79068.7,
+  "poc": 78900.0,
+  "vah": 79100.0,
+  "val": 78700.0,
+  "spot_cvd": 1.6509,
+  "perp_cvd": -35.328,
+  "divergence": 36.9789,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price is marginally holding above VAH despite aggressive market selling led by derivative traders, indicating passive bid absorption. This positioning creates high potential for a short-side leverage squeeze unless price breaks back inside the Value Area.",
-  "risk": "Failure to sustain acceptance above VAH at 78,850, triggering a mean-reversion rotation down to the POC at 78,450."
+  "uncertainty": "High",
+  "summary": "Price trades above VAH at 79,089 despite net negative CVD across spot and perp markets, signaling passive bid absorption or a perp-driven squeeze. Without spot market order aggressive follow-through, the breakout remains highly vulnerable to exhaustion.",
+  "risk": "Rejection back into Value Area below VAH (79,050.0) triggering forced unwinding of long positions."
 }
