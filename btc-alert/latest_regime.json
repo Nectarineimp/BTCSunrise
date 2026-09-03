@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788466750,
-  "price": 81410.4,
+  "timestamp": 1788467050,
+  "price": 81368.8,
   "poc": 81550.0,
   "vah": 81650.0,
   "val": 81400.0,
-  "spot_cvd": 8.3817,
-  "perp_cvd": -30.006,
-  "divergence": 38.3877,
+  "spot_cvd": 1.6503,
+  "perp_cvd": -38.666,
+  "divergence": 40.3163,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Spot CVD remains net-positive despite aggressive perpetual short selling driving price slightly below Value Area Low. This persistent divergence suggests spot absorption of derivative leverage, creating potential for a sharp short squeeze back toward POC.",
-  "risk": "Spot CVD turning negative alongside sustained price acceptance below 81400 VAL, triggering cascading long liquidations."
+  "summary": "Price testing liquidity below VAL at $81,368.80. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($81,550.00)."
 }
