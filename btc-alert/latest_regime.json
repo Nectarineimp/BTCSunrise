@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788472152,
-  "price": 81416.6,
-  "poc": 81500.0,
+  "timestamp": 1788472452,
+  "price": 81695.73,
+  "poc": 81550.0,
   "vah": 81700.0,
   "val": 81300.0,
-  "spot_cvd": 92.7165,
-  "perp_cvd": 164.905,
-  "divergence": -72.1885,
-  "regime": "Mean Reverting / Consolidation",
+  "spot_cvd": 83.9319,
+  "perp_cvd": 209.378,
+  "divergence": -125.4461,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "High",
-  "summary": "Price rotating inside Value Area near POC ($81,500.00). Spot CVD delta is positive (+92.72 BTC).",
-  "risk": "Range chop between VAL ($81,300.00) and VAH ($81,700.00)."
+  "summary": "Price has pushed above the Value Area High at 81,700, but the breakout is heavily skewed toward perpetual leverage rather than organic spot demand. The negative CVD divergence warns of weak spot follow-through, elevating the risk of an exhaustion pullback or liquidity sweep.",
+  "risk": "Perp long liquidation cascade upon price re-entering the Value Area below 81,700."
 }
