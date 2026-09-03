@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788443922,
-  "price": 78827.41,
+  "timestamp": 1788444222,
+  "price": 78744.2,
   "poc": 78500.0,
   "vah": 78750.0,
   "val": 78400.0,
-  "spot_cvd": -55.0876,
-  "perp_cvd": -244.058,
-  "divergence": 188.9704,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price has traded above VAH at 78,750 despite persistent negative net taker delta across both spot and perpetual books over the last 60 minutes. The heavy dominance of perpetual volume relative to spot indicates derivative positioning being absorbed by passive limit orders, raising squeeze potential alongside failure risk if passive bidding fades.",
-  "risk": "Acceptance back inside the Value Area below VAH (78,750.00), which would signal absorption exhaustion and trigger a mean-reversion sweep toward POC (78,500.00)."
+  "spot_cvd": -31.1618,
+  "perp_cvd": -253.638,
+  "divergence": 222.4762,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($78,500.00). Spot CVD delta is negative (-31.16 BTC).",
+  "risk": "Range chop between VAL ($78,400.00) and VAH ($78,750.00)."
 }
