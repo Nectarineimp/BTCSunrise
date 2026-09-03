@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788470051,
-  "price": 81561.7,
+  "timestamp": 1788470351,
+  "price": 81512.1,
   "poc": 81450.0,
   "vah": 81550.0,
   "val": 81350.0,
-  "spot_cvd": 6.1833,
-  "perp_cvd": -12.984,
-  "divergence": 19.1673,
-  "regime": "Spot-Led Expansion",
-  "uncertainty": "Medium",
-  "summary": "Spot market buying is actively absorbing derivative short pressure, propelling price acceptance above the Value Area High. Sustained spot aggressive bids are critical to prevent a failed breakout and subsequent rotation toward the Point of Control.",
-  "risk": "Loss of spot aggressive buying leading to a rejection back below Value Area High (81,550) and rotation into the Value Area."
+  "spot_cvd": 19.8931,
+  "perp_cvd": 93.818,
+  "divergence": -73.9249,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($81,450.00). Spot CVD delta is positive (+19.89 BTC).",
+  "risk": "Range chop between VAL ($81,350.00) and VAH ($81,550.00)."
 }
