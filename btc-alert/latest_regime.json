@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788465250,
-  "price": 81583.8,
+  "timestamp": 1788465550,
+  "price": 81766.03,
   "poc": 81200.0,
-  "vah": 81500.0,
+  "vah": 81550.0,
   "val": 81150.0,
-  "spot_cvd": 6.4474,
-  "perp_cvd": 709.885,
-  "divergence": -703.4376,
+  "spot_cvd": 7.3813,
+  "perp_cvd": 763.16,
+  "divergence": -755.7787,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "High",
-  "summary": "Price trading above VAH is heavily driven by aggressive perpetual buying with negligible spot CVD participation. This derivative-led breakout lacks organic spot backing, exposing the market to sudden liquidation cascades and mean reversion back into value.",
-  "risk": "Cascading long liquidations due to lack of spot volume and spot CVD support above VAH."
+  "uncertainty": "Medium",
+  "summary": "Price testing liquidity above VAH at $81,766.03. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($81,200.00)."
 }
