@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788445126,
-  "price": 79068.7,
+  "timestamp": 1788445426,
+  "price": 79123.9,
   "poc": 78900.0,
-  "vah": 79100.0,
+  "vah": 79000.0,
   "val": 78700.0,
-  "spot_cvd": 1.6509,
-  "perp_cvd": -35.328,
-  "divergence": 36.9789,
+  "spot_cvd": 25.3452,
+  "perp_cvd": -176.645,
+  "divergence": 201.9902,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "High",
-  "summary": "Price trades above VAH at 79,089 despite net negative CVD across spot and perp markets, signaling passive bid absorption or a perp-driven squeeze. Without spot market order aggressive follow-through, the breakout remains highly vulnerable to exhaustion.",
-  "risk": "Rejection back into Value Area below VAH (79,050.0) triggering forced unwinding of long positions."
+  "uncertainty": "Medium",
+  "summary": "Price testing liquidity above VAH at $79,123.90. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($78,900.00)."
 }
