@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788469751,
-  "price": 81285.9,
+  "timestamp": 1788470051,
+  "price": 81561.7,
   "poc": 81450.0,
   "vah": 81550.0,
   "val": 81350.0,
-  "spot_cvd": -33.9199,
-  "perp_cvd": -126.28,
-  "divergence": 92.3601,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "spot_cvd": 6.1833,
+  "perp_cvd": -12.984,
+  "divergence": 19.1673,
+  "regime": "Spot-Led Expansion",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity below VAL at $81,285.90. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($81,450.00)."
+  "summary": "Spot market buying is actively absorbing derivative short pressure, propelling price acceptance above the Value Area High. Sustained spot aggressive bids are critical to prevent a failed breakout and subsequent rotation toward the Point of Control.",
+  "risk": "Loss of spot aggressive buying leading to a rejection back below Value Area High (81,550) and rotation into the Value Area."
 }
