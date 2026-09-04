@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788488361,
-  "price": 80743.0,
-  "poc": 80800.0,
+  "timestamp": 1788488661,
+  "price": 80664.0,
+  "poc": 80750.0,
   "vah": 80900.0,
-  "val": 80750.0,
-  "spot_cvd": -87.3384,
-  "perp_cvd": 105.828,
-  "divergence": -193.1664,
+  "val": 80700.0,
+  "spot_cvd": -88.5729,
+  "perp_cvd": 73.802,
+  "divergence": -162.375,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price acceptance below Value Area Low at 80,750 alongside net spot selling indicates spot-led downside pressure. Persistent positive perpetual CVD highlights overleveraged late longs vulnerable to a liquidation cascade.",
-  "risk": "Cascading perpetual long liquidations triggered by continued spot selling below the 80,750 Value Area Low."
+  "summary": "Price testing liquidity below VAL at $80,664.00. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($80,750.00)."
 }
