@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788485359,
-  "price": 80784.1,
+  "timestamp": 1788485959,
+  "price": 80810.5,
   "poc": 80950.0,
-  "vah": 81200.0,
-  "val": 80800.0,
-  "spot_cvd": -54.0076,
-  "perp_cvd": -216.39,
-  "divergence": 162.3824,
+  "vah": 81050.0,
+  "val": 80750.0,
+  "spot_cvd": -59.8089,
+  "perp_cvd": -322.012,
+  "divergence": 262.2031,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has broken below the Value Area Low at 80,800, driven predominantly by aggressive derivative selling rather than spot distribution. The heavy perp volume and CVD divergence indicate short-chasing, leaving the market vulnerable to a squeeze if spot absorption materializes.",
-  "risk": "A quick reclaim of VAL (80,800) triggering cascades of short liquidations across derivative exchanges."
+  "summary": "Bitcoin is trading below the Value Area Low of $80,800, driven predominantly by aggressive perpetual shorting rather than spot distribution. The significant net negative perpetual CVD relative to muted spot selling suggests derivative overextension and heightened short squeeze risk if spot buyers absorb the float.",
+  "risk": "Cascading short squeeze trigger if price reclaims the $80,800 VAL micro-structure level."
 }
