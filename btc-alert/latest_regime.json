@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788491364,
-  "price": 80900.0,
+  "timestamp": 1788491665,
+  "price": 80948.4,
   "poc": 80650.0,
-  "vah": 80850.0,
+  "vah": 80900.0,
   "val": 80650.0,
-  "spot_cvd": -67.6889,
-  "perp_cvd": 7.277,
-  "divergence": -74.9659,
+  "spot_cvd": -60.2204,
+  "perp_cvd": 2.779,
+  "divergence": -62.9994,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "High",
-  "summary": "Price action trading above VAH is driven predominantly by derivatives expansion while spot CVD exhibits aggressive net selling. This severe spot-perp volume and CVD divergence signals a fragile breakout with high risk of exhaustion and pullbacks.",
-  "risk": "Loss of VAH acceptance at 80,850 triggering derivative long liquidations back toward the POC at 80,650."
+  "uncertainty": "Medium",
+  "summary": "Price testing liquidity above VAH at $80,948.40. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($80,650.00)."
 }
