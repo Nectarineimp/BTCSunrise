@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788488661,
-  "price": 80664.0,
-  "poc": 80750.0,
+  "timestamp": 1788488961,
+  "price": 80692.91,
+  "poc": 80800.0,
   "vah": 80900.0,
-  "val": 80700.0,
-  "spot_cvd": -88.5729,
-  "perp_cvd": 73.802,
-  "divergence": -162.375,
+  "val": 80650.0,
+  "spot_cvd": -117.0061,
+  "perp_cvd": 29.215,
+  "divergence": -146.2211,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price testing liquidity below VAL at $80,664.00. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($80,750.00)."
+  "uncertainty": "High",
+  "summary": "Price trading below Value Area Low accompanied by persistent spot selling indicates ongoing distribution. Perpetual buyers aggressively longing into spot flow creates a stark CVD divergence, leaving derivatives overpositioned and vulnerable to a liquidation cascade.",
+  "risk": "Cascading long liquidations in perpetual markets if price remains below VAL at 80650."
 }
