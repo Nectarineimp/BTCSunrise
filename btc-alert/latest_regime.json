@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788484454,
-  "price": 80938.0,
+  "timestamp": 1788484754,
+  "price": 80907.3,
   "poc": 80950.0,
-  "vah": 81250.0,
+  "vah": 81200.0,
   "val": 80900.0,
-  "spot_cvd": -35.7914,
-  "perp_cvd": -36.103,
-  "divergence": 0.3116,
-  "regime": "Mean Reverting / Consolidation",
-  "uncertainty": "High",
-  "summary": "Price rotating inside Value Area near POC ($80,950.00). Spot CVD delta is negative (-35.79 BTC).",
-  "risk": "Range chop between VAL ($80,900.00) and VAH ($81,250.00)."
+  "spot_cvd": -46.092,
+  "perp_cvd": -21.713,
+  "divergence": -24.379,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "uncertainty": "Medium",
+  "summary": "Price acceptance below Value Area Low (80,900) is being driven primarily by aggressive perpetual market selling with negative net deltas across both venues. Given perpetual volume accounts for roughly 80% of total flow, the breakdown lacks strong spot-led conviction and risks a rapid short-side leverage exhaustion.",
+  "risk": "Perpetual short overcrowding triggering a short squeeze if price reclaims Value Area Low at 80,900.0."
 }
