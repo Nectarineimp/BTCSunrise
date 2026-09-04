@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788490762,
-  "price": 80801.99,
+  "timestamp": 1788491062,
+  "price": 80860.1,
   "poc": 80650.0,
-  "vah": 80800.0,
+  "vah": 80850.0,
   "val": 80650.0,
-  "spot_cvd": -124.9,
-  "perp_cvd": -170.396,
-  "divergence": 45.496,
+  "spot_cvd": -106.4512,
+  "perp_cvd": -70.894,
+  "divergence": -35.5572,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price is marginally breaching VAH at 80,800 despite negative 60-minute Spot and Perp CVD deltas, highlighting aggressive taker selling into passive bids. With derivative volume dominating spot by over 3x, the lack of buying delta signals exhaustion and an elevated risk of a failed breakout back toward the POC at 80,650.",
-  "risk": "Re-entry and acceptance inside the Value Area below 80,800 triggering long unwinds down to POC."
+  "summary": "Price testing liquidity above VAH at $80,860.10. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($80,650.00)."
 }
