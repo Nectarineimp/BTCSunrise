@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788484754,
-  "price": 80907.3,
+  "timestamp": 1788485054,
+  "price": 80814.4,
   "poc": 80950.0,
   "vah": 81200.0,
-  "val": 80900.0,
-  "spot_cvd": -46.092,
-  "perp_cvd": -21.713,
-  "divergence": -24.379,
+  "val": 80850.0,
+  "spot_cvd": -53.4819,
+  "perp_cvd": -117.402,
+  "divergence": 63.9201,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price acceptance below Value Area Low (80,900) is being driven primarily by aggressive perpetual market selling with negative net deltas across both venues. Given perpetual volume accounts for roughly 80% of total flow, the breakdown lacks strong spot-led conviction and risks a rapid short-side leverage exhaustion.",
-  "risk": "Perpetual short overcrowding triggering a short squeeze if price reclaims Value Area Low at 80,900.0."
+  "summary": "Price testing liquidity below VAL at $80,814.40. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($80,950.00)."
 }
