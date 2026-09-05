@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788576779,
-  "price": 79557.4,
+  "timestamp": 1788577083,
+  "price": 79573.99,
   "poc": 79500.0,
   "vah": 79550.0,
   "val": 79450.0,
-  "spot_cvd": 9.9914,
-  "perp_cvd": -201.583,
-  "divergence": 211.5744,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "spot_cvd": 16.0752,
+  "perp_cvd": -200.443,
+  "divergence": 216.5182,
+  "regime": "Spot-Led Expansion",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity above VAH at $79,557.40. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($79,500.00)."
+  "summary": "Bitcoin has broken above VAH at 79,550 supported by positive spot CVD absorbing heavy aggressive derivative shorting. This spot-driven absorption above value creates strong tailwinds for a perp short squeeze toward higher liquidity pools.",
+  "risk": "Failure to hold above VAH at 79,550.0 triggering mean-reversion back toward the POC at 79,500.0."
 }
