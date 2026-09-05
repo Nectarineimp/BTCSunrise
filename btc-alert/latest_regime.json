@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788584720,
-  "price": 79435.0,
+  "timestamp": 1788584902,
+  "price": 79450.0,
   "poc": 79500.0,
-  "vah": 79600.0,
+  "vah": 79550.0,
   "val": 79450.0,
-  "spot_cvd": -58.9704,
-  "perp_cvd": -7.226,
-  "divergence": -51.7444,
+  "spot_cvd": -58.3279,
+  "perp_cvd": -21.819,
+  "divergence": -36.5089,
   "regime": "Spot-Led Expansion",
-  "uncertainty": "Low",
-  "summary": "Aggressive spot market selling has pushed price below the Value Area Low (79,450), confirming a genuine spot-driven downside expansion. Perpetual CVD lags the spot delta significantly, indicating spot supply dominance rather than speculative over-leverage.",
-  "risk": "Passive buyer absorption beneath VAL leading to a mean-reversion short squeeze back into the Value Area."
+  "uncertainty": "Medium",
+  "summary": "Aggressive spot net selling is leading the downward drive, pushing price marginally below the 60-minute Value Area Low at 79,450.00. The aligned negative delta across spot and perps confirms directional conviction, establishing a near-term bearish bias.",
+  "risk": "Failure to build acceptance below VAL (79,450.00) on elevated volume, which could trigger a rapid mean-reversion squeeze back toward the POC at 79,500.00."
 }
