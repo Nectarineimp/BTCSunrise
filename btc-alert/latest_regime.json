@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788593012,
-  "price": 79706.0,
+  "timestamp": 1788593312,
+  "price": 79683.9,
   "poc": 79650.0,
   "vah": 79700.0,
   "val": 79600.0,
-  "spot_cvd": 74.5679,
-  "perp_cvd": 41.052,
-  "divergence": 33.5159,
+  "spot_cvd": 90.9614,
+  "perp_cvd": 64.668,
+  "divergence": 26.2934,
   "regime": "Spot-Led Expansion",
   "uncertainty": "Low",
-  "summary": "Spot CVD delta significantly outpaces perpetual delta as price pushes past the Value Area High at 79,700, demonstrating strong spot-driven market conviction. Sustained trading above VAH supports continued bullish expansion toward higher liquidity pools.",
-  "risk": "A quick rejection and re-entry into the Value Area below 79,700 triggering a mean-reversion move toward the POC at 79,650."
+  "summary": "Price has broken above the Value Area High driven by net-positive spot CVD leading perpetual flow, confirming organic spot-driven demand. Acceptance above 79,700 establishes constructive expansion toward higher liquidity pools.",
+  "risk": "Failure to maintain acceptance above VAH (79,700) risking a sharp mean-reversion move back into the value area toward the POC at 79,650."
 }
