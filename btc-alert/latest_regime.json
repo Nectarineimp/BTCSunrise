@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788577083,
-  "price": 79573.99,
+  "timestamp": 1788577383,
+  "price": 79513.9,
   "poc": 79500.0,
-  "vah": 79550.0,
-  "val": 79450.0,
-  "spot_cvd": 16.0752,
-  "perp_cvd": -200.443,
-  "divergence": 216.5182,
-  "regime": "Spot-Led Expansion",
-  "uncertainty": "Medium",
-  "summary": "Bitcoin has broken above VAH at 79,550 supported by positive spot CVD absorbing heavy aggressive derivative shorting. This spot-driven absorption above value creates strong tailwinds for a perp short squeeze toward higher liquidity pools.",
-  "risk": "Failure to hold above VAH at 79,550.0 triggering mean-reversion back toward the POC at 79,500.0."
+  "vah": 79600.0,
+  "val": 79500.0,
+  "spot_cvd": 12.2089,
+  "perp_cvd": -61.927,
+  "divergence": 74.1359,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($79,500.00). Spot CVD delta is positive (+12.21 BTC).",
+  "risk": "Range chop between VAL ($79,500.00) and VAH ($79,600.00)."
 }
