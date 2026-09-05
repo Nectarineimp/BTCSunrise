@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788603838,
-  "price": 79648.05,
+  "timestamp": 1788604138,
+  "price": 79570.8,
   "poc": 79600.0,
   "vah": 79650.0,
   "val": 79550.0,
-  "spot_cvd": -115.1346,
-  "perp_cvd": -8.306,
-  "divergence": -106.8286,
-  "regime": "Spot-Led Expansion",
-  "uncertainty": "Low",
-  "summary": "Heavy spot market selling is driving price below the 79,600 Value Area Low, exhibiting clear downside conviction. The spot-led CVD expansion confirms genuine distribution rather than leverage-driven noise, favoring further downside continuation.",
-  "risk": "A rapid reclaim of the 79,600 VAL/POC cluster accompanied by spot CVD absorption."
+  "spot_cvd": -125.0637,
+  "perp_cvd": -16.604,
+  "divergence": -108.4597,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($79,600.00). Spot CVD delta is negative (-125.06 BTC).",
+  "risk": "Range chop between VAL ($79,550.00) and VAH ($79,650.00)."
 }
