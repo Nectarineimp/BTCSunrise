@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788575578,
-  "price": 79559.9,
+  "timestamp": 1788575878,
+  "price": 79608.17,
   "poc": 79500.0,
   "vah": 79600.0,
   "val": 79450.0,
-  "spot_cvd": -5.3639,
-  "perp_cvd": -304.015,
-  "divergence": 298.6511,
-  "regime": "Mean Reverting / Consolidation",
+  "spot_cvd": -3.3693,
+  "perp_cvd": -266.425,
+  "divergence": 263.0557,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "High",
-  "summary": "Price rotating inside Value Area near POC ($79,500.00). Spot CVD delta is negative (-5.36 BTC).",
-  "risk": "Range chop between VAL ($79,450.00) and VAH ($79,600.00)."
+  "summary": "Bitcoin is probing above VAH despite heavy negative perpetual CVD delta, signaling aggressive limit order absorption of active short-side market orders. Without supportive spot volume expansion, this value area breakout risks immediate exhaustion or a short squeeze if passive bids pull back.",
+  "risk": "Lack of spot market-order aggression to confirm the VAH breakout, risking a mean-reversion back inside the Value Area toward POC."
 }
