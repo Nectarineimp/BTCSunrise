@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788596617,
-  "price": 79668.78,
+  "timestamp": 1788596917,
+  "price": 79646.0,
   "poc": 79650.0,
   "vah": 79750.0,
-  "val": 79650.0,
-  "spot_cvd": 14.4975,
-  "perp_cvd": 29.673,
-  "divergence": -15.1755,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "val": 79600.0,
+  "spot_cvd": -4.6292,
+  "perp_cvd": 32.261,
+  "divergence": -36.8902,
+  "regime": "Mean Reverting / Consolidation",
   "uncertainty": "High",
-  "summary": "Bitcoin is trading below the Value Area Low at 79,650 despite positive perpetual CVD, indicating aggressive derivatives buyers are getting absorbed by passive sellers. The heavy skew toward leverage volume without spot backing leaves price vulnerable to a sharp long liquidation sweep.",
-  "risk": "Cascading long liquidations of trapped derivative open interest if price fails to reclaim the 79,650 VAL."
+  "summary": "Price rotating inside Value Area near POC ($79,650.00). Spot CVD delta is negative (-4.63 BTC).",
+  "risk": "Range chop between VAL ($79,600.00) and VAH ($79,750.00)."
 }
