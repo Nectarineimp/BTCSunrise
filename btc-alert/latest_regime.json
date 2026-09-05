@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788614348,
-  "price": 79680.91,
+  "timestamp": 1788614648,
+  "price": 79759.46,
   "poc": 79650.0,
   "vah": 79750.0,
   "val": 79650.0,
-  "spot_cvd": 24.8734,
-  "perp_cvd": 103.949,
-  "divergence": -79.0756,
+  "spot_cvd": 33.9023,
+  "perp_cvd": 119.897,
+  "divergence": -85.9947,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "High",
-  "summary": "Aggressive perp buying is failing to lift price back into the Value Area due to negligible spot CVD support. This pronounced derivative divergence below VAL creates acute vulnerability to a long liquidation cascade.",
-  "risk": "Cascading long liquidations from aggressive derivative buyers trapped below Value Area Low without spot backing."
+  "uncertainty": "Medium",
+  "summary": "Price testing liquidity above VAH at $79,759.46. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($79,650.00)."
 }
