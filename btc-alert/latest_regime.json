@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788574077,
-  "price": 79528.0,
-  "poc": 79600.0,
+  "timestamp": 1788574377,
+  "price": 79577.99,
+  "poc": 79550.0,
   "vah": 79700.0,
   "val": 79500.0,
-  "spot_cvd": -12.5952,
-  "perp_cvd": -198.587,
-  "divergence": 185.9918,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price has broken below the Value Area Low driven primarily by aggressive perpetual market selling, while spot CVD remains relatively flat. This pronounced CVD divergence signals potential perpetual short exhaustion and a squeeze risk if spot absorption holds.",
-  "risk": "Spot market joining aggressive perpetual selling to confirm the breakdown below Value Area Low."
+  "spot_cvd": 0.5085,
+  "perp_cvd": -136.984,
+  "divergence": 137.4925,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($79,550.00). Spot CVD delta is positive (+0.51 BTC).",
+  "risk": "Range chop between VAL ($79,500.00) and VAH ($79,700.00)."
 }
