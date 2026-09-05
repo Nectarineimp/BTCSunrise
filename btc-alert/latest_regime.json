@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788612547,
-  "price": 79718.01,
-  "poc": 79600.0,
-  "vah": 79700.0,
+  "timestamp": 1788612847,
+  "price": 79724.77,
+  "poc": 79650.0,
+  "vah": 79750.0,
   "val": 79600.0,
-  "spot_cvd": 18.9973,
-  "perp_cvd": 100.063,
-  "divergence": -81.0657,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price has broken above VAH driven predominantly by derivative aggressive buying, while spot CVD shows negligible participation (+19.9 vs +103.6 perp). This leverage-heavy breakout above 79,700 lacks organic spot backing, raising the probability of a squeeze exhaustion and mean-reversion back into the value area.",
-  "risk": "Lack of spot CVD follow-through leading to long liquidation cascade back below VAH (79,700)."
+  "spot_cvd": 18.1966,
+  "perp_cvd": 87.323,
+  "divergence": -69.1264,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($79,650.00). Spot CVD delta is positive (+18.20 BTC).",
+  "risk": "Range chop between VAL ($79,600.00) and VAH ($79,750.00)."
 }
