@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788579186,
-  "price": 79594.91,
+  "timestamp": 1788579486,
+  "price": 79620.43,
   "poc": 79500.0,
   "vah": 79600.0,
   "val": 79500.0,
-  "spot_cvd": 21.278,
-  "perp_cvd": 59.617,
-  "divergence": -38.339,
-  "regime": "Mean Reverting / Consolidation",
-  "uncertainty": "High",
-  "summary": "Price rotating inside Value Area near POC ($79,500.00). Spot CVD delta is positive (+21.28 BTC).",
-  "risk": "Range chop between VAL ($79,500.00) and VAH ($79,600.00)."
+  "spot_cvd": 20.627,
+  "perp_cvd": 17.917,
+  "divergence": 2.71,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "uncertainty": "Medium",
+  "summary": "Price testing liquidity above VAH at $79,620.43. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($79,500.00)."
 }
