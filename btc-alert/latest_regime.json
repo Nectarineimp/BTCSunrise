@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788686161,
-  "price": 79906.5,
+  "timestamp": 1788686461,
+  "price": 79937.13,
   "poc": 79750.0,
   "vah": 79900.0,
   "val": 79750.0,
-  "spot_cvd": -191.4667,
-  "perp_cvd": 99.888,
-  "divergence": -291.3547,
+  "spot_cvd": -188.6387,
+  "perp_cvd": 87.103,
+  "divergence": -275.7417,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has pushed above VAH driven primarily by perpetual futures buying, but negative spot CVD indicates spot distribution into the breakout. Without spot market confirmation, this leverage-driven expansion carries elevated risk of a sharp mean-reversion back into the value area.",
-  "risk": "Lack of spot bid support triggering a liquidation cascade back below VAH (79,900.00)."
+  "summary": "Price testing liquidity above VAH at $79,937.13. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($79,750.00)."
 }
