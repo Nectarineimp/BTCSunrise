@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788683759,
-  "price": 79789.96,
+  "timestamp": 1788684042,
+  "price": 79749.1,
   "poc": 79750.0,
   "vah": 79800.0,
   "val": 79750.0,
-  "spot_cvd": -84.3623,
-  "perp_cvd": -15.738,
-  "divergence": -68.6243,
-  "regime": "Mean Reverting / Consolidation",
-  "uncertainty": "High",
-  "summary": "Price rotating inside Value Area near POC ($79,750.00). Spot CVD delta is negative (-84.36 BTC).",
-  "risk": "Range chop between VAL ($79,750.00) and VAH ($79,800.00)."
+  "spot_cvd": -170.9167,
+  "perp_cvd": -25.791,
+  "divergence": -145.1257,
+  "regime": "Spot-Led Expansion",
+  "uncertainty": "Low",
+  "summary": "Aggressive spot selling dominates derivative flow and has pushed price below the Value Area Low of 79,750. Failure to quickly reclaim the POC/VAL cluster signals sustained spot-driven downside expansion.",
+  "risk": "Passive spot absorption near current lows triggering a quick reclaim of 79,750 VAL."
 }
