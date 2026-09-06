@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788690962,
-  "price": 79979.22,
+  "timestamp": 1788691262,
+  "price": 79985.98,
   "poc": 79850.0,
   "vah": 79950.0,
-  "val": 79850.0,
-  "spot_cvd": -197.2986,
-  "perp_cvd": -19.116,
-  "divergence": -178.1826,
+  "val": 79800.0,
+  "spot_cvd": -141.5958,
+  "perp_cvd": 65.58,
+  "divergence": -207.1758,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Bitcoin is trading above VAH despite negative spot and perp cumulative volume delta, highlighting a clear divergence between price expansion and spot order flow. The lack of spot delta backing on this move above value area high elevates the probability of buyer exhaustion and a quick mean-reversion back into the value area.",
-  "risk": "Failure of spot buyers to confirm the price expansion above VAH (79,950), increasing the risk of a reversal toward the 79,850 POC."
+  "summary": "Price testing liquidity above VAH at $79,985.98. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($79,850.00)."
 }
