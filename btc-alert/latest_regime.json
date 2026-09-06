@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788693964,
-  "price": 79906.18,
+  "timestamp": 1788694074,
+  "price": 79877.2,
   "poc": 79950.0,
   "vah": 80000.0,
   "val": 79900.0,
-  "spot_cvd": 2.2674,
-  "perp_cvd": -0.526,
-  "divergence": 2.7934,
-  "regime": "Mean Reverting / Consolidation",
-  "uncertainty": "High",
-  "summary": "Price rotating inside Value Area near POC ($79,950.00). Spot CVD delta is positive (+2.27 BTC).",
-  "risk": "Range chop between VAL ($79,900.00) and VAH ($80,000.00)."
+  "spot_cvd": -4.0887,
+  "perp_cvd": 15.954,
+  "divergence": -20.0426,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "uncertainty": "Low",
+  "summary": "Aggressive speculative perp buying is being absorbed by spot distribution, pushing price below the Value Area Low ($79,900). This severe spot-perp CVD divergence creates significant liquidation risk for trapped long leverage.",
+  "risk": "Cascade of long liquidations triggered by continued price acceptance below VAL ($79,900)."
 }
