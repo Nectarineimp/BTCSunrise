@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788692463,
-  "price": 79999.01,
+  "timestamp": 1788692763,
+  "price": 79973.55,
   "poc": 79950.0,
   "vah": 80000.0,
   "val": 79900.0,
-  "spot_cvd": 31.5599,
-  "perp_cvd": 89.674,
-  "divergence": -58.1141,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price has breached above VAH at 80,000, but the move is disproportionately driven by aggressive perpetual swap positioning rather than spot accumulation. Without spot CVD confirmation to absorb overhead supply, this leverage-fueled extension faces substantial risk of a mean-reverting liquidation cascade.",
-  "risk": "Absence of spot CVD follow-through triggering perp long liquidations back into the Value Area."
+  "spot_cvd": 32.5606,
+  "perp_cvd": 99.729,
+  "divergence": -67.1684,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($79,950.00). Spot CVD delta is positive (+32.56 BTC).",
+  "risk": "Range chop between VAL ($79,900.00) and VAH ($80,000.00)."
 }
