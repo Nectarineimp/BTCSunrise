@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788696966,
-  "price": 79962.0,
+  "timestamp": 1788697266,
+  "price": 79962.92,
   "poc": 79850.0,
   "vah": 79950.0,
   "val": 79850.0,
-  "spot_cvd": -10.8292,
-  "perp_cvd": -119.353,
-  "divergence": 108.5238,
+  "spot_cvd": 4.4096,
+  "perp_cvd": -65.411,
+  "divergence": 69.8206,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price is holding above Value Area High despite heavy aggressive perp selling, indicating strong passive limit order absorption at resistance. A failure by derivative shorts to push price back into the value area leaves aggressive leverage highly vulnerable to a upward squeeze.",
-  "risk": "Rejection and acceptance back below VAH (79,950.00) triggering a rapid mean-reversion rotation toward the POC (79,850.00)."
+  "summary": "Price testing liquidity above VAH at $79,962.92. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($79,850.00)."
 }
