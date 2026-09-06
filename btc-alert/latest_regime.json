@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788699970,
-  "price": 79916.59,
+  "timestamp": 1788700270,
+  "price": 79909.81,
   "poc": 79900.0,
   "vah": 80000.0,
   "val": 79900.0,
-  "spot_cvd": 8.1855,
-  "perp_cvd": 67.272,
-  "divergence": -59.0865,
+  "spot_cvd": -4.9823,
+  "perp_cvd": 50.232,
+  "divergence": -55.2143,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Aggressive perpetual market buying is failing to push price back into the Value Area as spot CVD remains flat. This pronounced derivative divergence below VAL creates significant vulnerability to a long liquidation cascade without spot participation.",
-  "risk": "Forced long unwinding triggered by lack of spot support below the 79,900 Value Area Low."
+  "summary": "Price has broken below the 79,900 VAL despite aggressive leverage buying (+41.8 BTC Perp CVD), signaling clear spot absorption of derivative flows. This sharp spot-perp CVD divergence leaves overextended perpetual longs vulnerable to a cascading unwind if price remains under value.",
+  "risk": "Long liquidation cascade driven by perp position unwinding below the 79,900 Value Area Low."
 }
