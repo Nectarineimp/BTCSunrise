@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788700570,
-  "price": 79886.01,
+  "timestamp": 1788700870,
+  "price": 79827.99,
   "poc": 79900.0,
   "vah": 80000.0,
-  "val": 79900.0,
-  "spot_cvd": -18.8697,
-  "perp_cvd": 62.97,
-  "divergence": -81.8397,
+  "val": 79850.0,
+  "spot_cvd": -32.9515,
+  "perp_cvd": -22.618,
+  "divergence": -10.3335,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity below VAL at $79,886.01. Delta volume lacks high-conviction institutional participation.",
+  "summary": "Price testing liquidity below VAL at $79,827.99. Delta volume lacks high-conviction institutional participation.",
   "risk": "Mean-reversion trap back toward Value Area POC ($79,900.00)."
 }
