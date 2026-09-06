@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788701170,
-  "price": 79829.99,
+  "timestamp": 1788701470,
+  "price": 79765.0,
   "poc": 79900.0,
   "vah": 80000.0,
-  "val": 79850.0,
-  "spot_cvd": -42.1407,
-  "perp_cvd": -73.642,
-  "divergence": 31.5013,
+  "val": 79800.0,
+  "spot_cvd": -59.4749,
+  "perp_cvd": -134.558,
+  "divergence": 75.0831,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Bitcoin is currently trading below the Value Area Low at 79,850, driven primarily by aggressive derivative selling as perpetual CVD delta heavily outpaces spot. While directional alignment between spot and perp CVD confirms selling conviction, the heavy derivative volume bias increases the risk of a late-seller liquidation flush.",
-  "risk": "A quick mean-reversion reclaim of the 79,850 Value Area Low triggering short-side liquidations back toward the 79,900 POC."
+  "summary": "Price testing liquidity below VAL at $79,765.00. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($79,900.00)."
 }
