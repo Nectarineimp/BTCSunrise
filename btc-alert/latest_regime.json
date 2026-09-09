@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788969064,
-  "price": 78649.99,
+  "timestamp": 1788969364,
+  "price": 78663.9,
   "poc": 78550.0,
   "vah": 78650.0,
   "val": 78250.0,
-  "spot_cvd": 7.9107,
-  "perp_cvd": -182.876,
-  "divergence": 190.7867,
+  "spot_cvd": 9.2423,
+  "perp_cvd": -144.46,
+  "divergence": 153.7023,
   "regime": "Absorption at Resistance",
   "uncertainty": "Medium",
-  "summary": "Spot absorption is countering aggressive perpetual selling at the Value Area High, maintaining price action marginally above 78,650. The massive CVD divergence leaves perp shorts vulnerable to a squeeze if spot bids continue to hold the 78,550-78,650 level.",
-  "risk": "Failure of spot absorption triggering a liquidation-fueled mean-reversion back into the Value Area towards the POC."
+  "summary": "Spot buyers are absorbing aggressive perpetual futures selling as price holds slightly above the Value Area High at 78,650. If perp shorts fail to force acceptance back inside the value area, trapped short leverage could trigger an upward squeeze despite modest spot volumes.",
+  "risk": "Loss of VAH support at 78,650 leading to rapid mean reversion down to the Point of Control at 78,550."
 }
