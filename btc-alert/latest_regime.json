@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788974770,
-  "price": 78863.0,
+  "timestamp": 1788975071,
+  "price": 78850.83,
   "poc": 78750.0,
   "vah": 78850.0,
   "val": 78700.0,
-  "spot_cvd": 116.2826,
-  "perp_cvd": -50.423,
-  "divergence": 166.7056,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "spot_cvd": 111.9951,
+  "perp_cvd": -111.939,
+  "divergence": 223.9341,
+  "regime": "Spot-Led Expansion",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity above VAH at $78,863.00. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($78,750.00)."
+  "summary": "Spot market buyers (+112 BTC) are actively absorbing aggressive perp selling (-112 BTC) to drive price just above the Value Area High at 78,850. Continuation higher relies entirely on sustained spot aggression to absorb heavy derivative volume and defend the VAH breakout.",
+  "risk": "Exhaustion of spot buying delta leading to a failed VAH breakout and mean-reversion toward the 78,750 POC."
 }
