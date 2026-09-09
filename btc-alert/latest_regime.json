@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788983484,
-  "price": 78190.8,
+  "timestamp": 1788983785,
+  "price": 78114.3,
   "poc": 78350.0,
   "vah": 78500.0,
   "val": 78300.0,
-  "spot_cvd": -51.6779,
-  "perp_cvd": -103.869,
-  "divergence": 52.1911,
+  "spot_cvd": -50.4322,
+  "perp_cvd": -214.384,
+  "divergence": 163.9518,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Bitcoin has auctioned below Value Area Low at 78,300, driven primarily by heavy perpetual derivative selling that accounts for over 83% of total volume. While spot and perp CVD are aligned to the downside, the extreme leverage dominance below value elevates the risk of a sharp short-squeeze back toward the POC at 78,350.",
-  "risk": "Perpetual short overextension below Value Area Low triggering an aggressive short squeeze."
+  "summary": "Price testing liquidity below VAL at $78,114.30. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($78,350.00)."
 }
