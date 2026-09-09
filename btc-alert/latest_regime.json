@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788980183,
-  "price": 78439.79,
+  "timestamp": 1788980483,
+  "price": 78408.9,
   "poc": 78550.0,
-  "vah": 78650.0,
+  "vah": 78600.0,
   "val": 78400.0,
-  "spot_cvd": 8.5236,
-  "perp_cvd": -220.778,
-  "divergence": 229.3016,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Aggressive derivative shorting has driven price slightly below Value Area Low while spot delta remains marginally positive. This pronounced CVD divergence points to potential perp seller exhaustion and elevates short squeeze risk if 78,400 VAL is reclaimed.",
-  "risk": "Sustained breakdown below VAL (78,400) driven by persistent derivative selling pressure."
+  "spot_cvd": -17.9566,
+  "perp_cvd": -172.454,
+  "divergence": 154.4974,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($78,550.00). Spot CVD delta is negative (-17.96 BTC).",
+  "risk": "Range chop between VAL ($78,400.00) and VAH ($78,600.00)."
 }
