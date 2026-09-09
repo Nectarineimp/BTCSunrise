@@ -1,14 +1,14 @@
 {
-  "timestamp": 1788962464,
-  "price": 79091.56,
+  "timestamp": 1788962764,
+  "price": 78946.7,
   "poc": 79300.0,
-  "vah": 79600.0,
-  "val": 79150.0,
-  "spot_cvd": -17.2068,
-  "perp_cvd": -313.912,
-  "divergence": 296.7052,
+  "vah": 79550.0,
+  "val": 79050.0,
+  "spot_cvd": -40.8865,
+  "perp_cvd": -319.683,
+  "divergence": 278.7965,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity below VAL at $79,091.56. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($79,300.00)."
+  "summary": "Aggressive perpetual futures selling has pushed price below the Value Area Low of 79,050 while spot CVD remains relatively passive. This pronounced order flow divergence indicates overextended derivative shorts, raising the probability of a sharp mean-reversion squeeze back toward the 79,300 POC.",
+  "risk": "Cascading spot market capitulation validating the breakdown below VAL."
 }
