@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789077473,
-  "price": 77150.0,
+  "timestamp": 1789077773,
+  "price": 77062.0,
   "poc": 77150.0,
-  "vah": 77250.0,
+  "vah": 77200.0,
   "val": 77100.0,
-  "spot_cvd": -29.1136,
-  "perp_cvd": -118.0,
-  "divergence": 88.8864,
+  "spot_cvd": -29.4852,
+  "perp_cvd": -160.818,
+  "divergence": 131.3328,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has marginally broken below Value Area Low driven primarily by aggressive perpetual swap selling while spot selling remains muted. Heavy derivative-led delta expansion near value boundaries exposes late shorts to exhaustion and potential mean-reversion risk.",
-  "risk": "Sustained spot market selling below 77,100 confirming a true value acceptance breakdown."
+  "summary": "Price testing liquidity below VAL at $77,062.00. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($77,150.00)."
 }
