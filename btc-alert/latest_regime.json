@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789075671,
-  "price": 77225.22,
+  "timestamp": 1789075971,
+  "price": 77214.39,
   "poc": 77200.0,
   "vah": 77300.0,
   "val": 77200.0,
-  "spot_cvd": -27.9157,
-  "perp_cvd": 10.918,
-  "divergence": -38.8338,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "spot_cvd": -27.1825,
+  "perp_cvd": 23.442,
+  "divergence": -50.6245,
+  "regime": "Mean Reverting / Consolidation",
   "uncertainty": "High",
-  "summary": "Price trading below the Value Area Low alongside strong spot CVD selling (-26.8) demonstrates clear spot distribution. Derivative buyers attempting to absorb this flow create a high-risk divergence vulnerable to a long liquidation cascade.",
-  "risk": "Forced derivative unwinding and long liquidations if price remains suppressed below 77200 VAL."
+  "summary": "Price rotating inside Value Area near POC ($77,200.00). Spot CVD delta is negative (-27.18 BTC).",
+  "risk": "Range chop between VAL ($77,200.00) and VAH ($77,300.00)."
 }
