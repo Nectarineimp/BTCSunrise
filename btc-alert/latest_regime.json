@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789062744,
-  "price": 77391.6,
+  "timestamp": 1789063051,
+  "price": 77339.7,
   "poc": 77300.0,
   "vah": 77350.0,
   "val": 77100.0,
-  "spot_cvd": -29.3293,
-  "perp_cvd": -178.17,
-  "divergence": 148.8407,
+  "spot_cvd": -25.0678,
+  "perp_cvd": -172.82,
+  "divergence": 147.7522,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity above VAH at $77,391.60. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($77,300.00)."
+  "summary": "Bitcoin is trading above VAH at 77,350 despite negative CVD across both spot and perpetual markets, indicating passive absorption rather than aggressive spot-led buying. The heavy reliance on perpetual volume without spot delta expansion leaves the current push above value highly susceptible to an exhaustion reversal.",
+  "risk": "Loss of the 77,350 VAH level triggering a unwind back toward the 77,300 POC."
 }
