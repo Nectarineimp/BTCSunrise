@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789053718,
-  "price": 77115.2,
-  "poc": 77300.0,
+  "timestamp": 1789054018,
+  "price": 77073.3,
+  "poc": 77250.0,
   "vah": 77400.0,
   "val": 77250.0,
-  "spot_cvd": -38.5826,
-  "perp_cvd": 27.674,
-  "divergence": -66.2566,
+  "spot_cvd": -47.543,
+  "perp_cvd": -27.855,
+  "divergence": -19.688,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "High",
-  "summary": "Price trading below VAL alongside negative spot CVD indicates organic spot distribution, while positive perp CVD reveals aggressive derivative buyers fighting the local breakdown. This sharp divergence exposes over-leveraged perp longs to liquidation cascades if VAL at 77,250 remains un-reclaimed.",
-  "risk": "Cascading liquidations of late perp longs trapped below Value Area Low (77,250)"
+  "uncertainty": "Medium",
+  "summary": "Price testing liquidity below VAL at $77,073.30. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($77,250.00)."
 }
