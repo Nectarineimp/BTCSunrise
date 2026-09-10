@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789047401,
-  "price": 76810.5,
+  "timestamp": 1789047701,
+  "price": 76796.0,
   "poc": 77050.0,
   "vah": 77250.0,
-  "val": 76900.0,
-  "spot_cvd": -155.7698,
-  "perp_cvd": -335.219,
-  "divergence": 179.4492,
+  "val": 76850.0,
+  "spot_cvd": -154.9728,
+  "perp_cvd": -362.997,
+  "divergence": 208.0242,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has broken below the Value Area Low at 76,900 driven predominantly by aggressive perpetual contract selling rather than spot distribution. The strong derivative volume bias relative to spot elevates short-term short exhaustion risk if spot absorption emerges below value.",
-  "risk": "Lack of spot delta follow-through leaving aggressive perp shorts vulnerable to a squeeze back into the Value Area towards POC at 77,050."
+  "summary": "Price testing liquidity below VAL at $76,796.00. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($77,050.00)."
 }
