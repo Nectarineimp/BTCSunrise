@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789046501,
-  "price": 76807.9,
+  "timestamp": 1789046801,
+  "price": 76748.1,
   "poc": 77050.0,
   "vah": 77250.0,
-  "val": 76950.0,
+  "val": 76900.0,
   "spot_cvd": -154.9363,
-  "perp_cvd": -359.528,
-  "divergence": 204.5917,
+  "perp_cvd": -425.085,
+  "divergence": 270.1487,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has broken below the Value Area Low at 76,950 driven primarily by aggressive derivative short order flow outpacing spot market activity. High perp-to-spot volume ratio indicates leveraged position building, elevating the risk of a sharp short-squeeze back into value if spot absorption emerges.",
-  "risk": "Potential short-squeeze cascading price back above VAL (76,950) due to overextended derivative short positioning."
+  "summary": "Price testing liquidity below VAL at $76,748.10. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($77,050.00)."
 }
