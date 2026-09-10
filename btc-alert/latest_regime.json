@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789071458,
-  "price": 77286.9,
+  "timestamp": 1789071758,
+  "price": 77311.3,
   "poc": 77100.0,
-  "vah": 77250.0,
+  "vah": 77300.0,
   "val": 77100.0,
-  "spot_cvd": -87.935,
-  "perp_cvd": -43.912,
-  "divergence": -44.023,
+  "spot_cvd": -79.0022,
+  "perp_cvd": -63.373,
+  "divergence": -15.6292,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has pushed above the Value Area High (77,250) despite persistent negative spot and perp CVD, indicating passive absorption rather than aggressive spot demand. The lack of spot buyer initiation at local highs increases the likelihood of an exhaustion drop back into the value area.",
-  "risk": "Acceptance back inside the Value Area below 77,250 triggered by continued spot market selling."
+  "summary": "Price testing liquidity above VAH at $77,311.30. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($77,100.00)."
 }
