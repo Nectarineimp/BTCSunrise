@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789061240,
-  "price": 77259.89,
+  "timestamp": 1789061543,
+  "price": 77451.59,
   "poc": 77100.0,
-  "vah": 77250.0,
-  "val": 76950.0,
-  "spot_cvd": 9.5858,
-  "perp_cvd": -203.333,
-  "divergence": 212.9188,
-  "regime": "Spot-Led Expansion",
+  "vah": 77350.0,
+  "val": 77050.0,
+  "spot_cvd": 5.8239,
+  "perp_cvd": -132.023,
+  "divergence": 137.8469,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Spot CVD accumulation is absorbing aggressive perpetual short positioning, driving price acceptance above the Value Area High of 77,250. This bullish spot-derivative divergence reflects structural spot demand breaking through paper market resistance.",
-  "risk": "Failure to maintain acceptance above VAH (77,250) triggering a rapid mean-reversion back toward the Point of Control at 77,100."
+  "summary": "Price testing liquidity above VAH at $77,451.59. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($77,100.00)."
 }
