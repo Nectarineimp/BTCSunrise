@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789089182,
-  "price": 76931.4,
+  "timestamp": 1789089482,
+  "price": 76870.2,
   "poc": 76800.0,
   "vah": 76900.0,
   "val": 76700.0,
-  "spot_cvd": -89.8679,
-  "perp_cvd": 162.452,
-  "divergence": -252.32,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "spot_cvd": -72.0419,
+  "perp_cvd": 145.251,
+  "divergence": -217.2929,
+  "regime": "Mean Reverting / Consolidation",
   "uncertainty": "High",
-  "summary": "Price has pushed above VAH driven purely by perp aggressive buying while spot CVD exhibits net selling delta. This heavy spot-perp divergence indicates a vulnerable leverage-fueled breakout prone to sharp mean-reversion into the value area.",
-  "risk": "Perp long liquidation cascade upon failure to maintain acceptance above VAH 76,900 without spot order flow confirmation."
+  "summary": "Price rotating inside Value Area near POC ($76,800.00). Spot CVD delta is negative (-72.04 BTC).",
+  "risk": "Range chop between VAL ($76,700.00) and VAH ($76,900.00)."
 }
