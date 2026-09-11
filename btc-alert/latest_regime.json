@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789091883,
-  "price": 76927.3,
+  "timestamp": 1789092183,
+  "price": 76928.51,
   "poc": 76900.0,
   "vah": 76950.0,
   "val": 76750.0,
-  "spot_cvd": 34.0309,
-  "perp_cvd": -33.311,
-  "divergence": 67.3418,
-  "regime": "Absorption at Resistance",
-  "uncertainty": "Medium",
-  "summary": "Spot buying is actively absorbing aggressive perp short positions at the Value Area High (76950.0), driving price marginally above value. Continued spot delta persistence is required to confirm acceptance above VAH and prevent a mean-reversion back to the POC.",
-  "risk": "Exhaustion of spot buying volume above VAH, triggering a mean-reversion back into the Value Area toward 76900.0."
+  "spot_cvd": 28.6122,
+  "perp_cvd": -107.365,
+  "divergence": 135.9772,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($76,900.00). Spot CVD delta is positive (+28.61 BTC).",
+  "risk": "Range chop between VAL ($76,750.00) and VAH ($76,950.00)."
 }
