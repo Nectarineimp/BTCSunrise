@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789086182,
-  "price": 76806.1,
+  "timestamp": 1789086482,
+  "price": 76830.7,
   "poc": 76750.0,
-  "vah": 76800.0,
+  "vah": 76850.0,
   "val": 76650.0,
-  "spot_cvd": -60.8693,
-  "perp_cvd": -12.978,
-  "divergence": -47.8913,
+  "spot_cvd": -74.2945,
+  "perp_cvd": -50.657,
+  "divergence": -23.6375,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price has pushed above VAH at 76,800 despite negative 60m Spot and Perp CVD, indicating a leverage-driven extension lacking spot demand confirmation. The pronounced spot CVD divergence suggests passive limit absorption or exhaustion, elevating the risk of a mean-reverting rejection back into value.",
-  "risk": "Break below VAH (76,800.0) triggering long liquidations back toward POC (76,750.0)."
+  "uncertainty": "High",
+  "summary": "Price is attempting a marginal breakout above VAH despite persistent negative CVD across both spot and perpetual markets. This pronounced delta-price divergence signals weak spot backing and high vulnerability to buyer exhaustion.",
+  "risk": "Aggressive spot CVD selling forcing a failed breakout and rejection back inside the 76,650-76,850 Value Area."
 }
