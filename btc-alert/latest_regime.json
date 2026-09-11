@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789085282,
-  "price": 76720.0,
+  "timestamp": 1789085582,
+  "price": 76753.9,
   "poc": 76500.0,
   "vah": 76750.0,
-  "val": 76500.0,
-  "spot_cvd": -170.282,
-  "perp_cvd": -627.214,
-  "divergence": 456.932,
-  "regime": "Absorption at Resistance",
+  "val": 76450.0,
+  "spot_cvd": -143.0758,
+  "perp_cvd": -236.431,
+  "divergence": 93.3552,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price is hovering marginally above the Value Area High despite aggressive sell market orders across spot and perpetuals, indicating heavy passive limit absorption. If aggressive sellers fail to push price back into the value area, trapped shorts could catalyze a rapid upward move.",
-  "risk": "Breakdown and acceptance back inside the Value Area below 76,750 targeting the POC at 76,500."
+  "summary": "Price testing liquidity above VAH at $76,753.90. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($76,500.00)."
 }
