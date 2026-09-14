@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789361954,
-  "price": 77652.0,
-  "poc": 77550.0,
-  "vah": 77650.0,
-  "val": 77500.0,
-  "spot_cvd": 110.9882,
-  "perp_cvd": 79.693,
-  "divergence": 31.2952,
-  "regime": "Spot-Led Expansion",
-  "uncertainty": "Medium",
-  "summary": "Spot net buying is outpacing perpetual swap delta, driving price marginally above the 60-minute Value Area High at 77,650. Sustained acceptance above VAH is required to confirm bullish continuation given heavy perpetual volume domination.",
-  "risk": "Failed auction above VAH (77,650) triggering a mean-reversion move back toward the POC at 77,550."
+  "timestamp": 1789362255,
+  "price": 77580.0,
+  "poc": 77600.0,
+  "vah": 77700.0,
+  "val": 77550.0,
+  "spot_cvd": -5.6765,
+  "perp_cvd": -2.924,
+  "divergence": -2.7525,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($77,600.00). Spot CVD delta is negative (-5.68 BTC).",
+  "risk": "Range chop between VAL ($77,550.00) and VAH ($77,700.00)."
 }
