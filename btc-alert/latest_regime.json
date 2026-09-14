@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789351152,
-  "price": 77035.4,
-  "poc": 76800.0,
+  "timestamp": 1789351452,
+  "price": 77135.08,
+  "poc": 76850.0,
   "vah": 76900.0,
-  "val": 76700.0,
-  "spot_cvd": -67.994,
-  "perp_cvd": -3.965,
-  "divergence": -64.029,
+  "val": 76650.0,
+  "spot_cvd": -44.255,
+  "perp_cvd": 102.382,
+  "divergence": -146.637,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "High",
-  "summary": "Price is trading above VAH at 77064.73, but net-negative spot CVD (-72.87) indicates the extension is driven by leveraged derivatives rather than spot demand. Without spot order flow confirmation, this breakout lacks spot conviction and faces significant exhaustion risk.",
-  "risk": "Failure to hold above VAH (76,900) triggering long liquidations and a mean-reversion move toward the POC (76,800)."
+  "uncertainty": "Medium",
+  "summary": "Price testing liquidity above VAH at $77,135.08. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($76,850.00)."
 }
