@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789361654,
-  "price": 77650.62,
+  "timestamp": 1789361954,
+  "price": 77652.0,
   "poc": 77550.0,
   "vah": 77650.0,
   "val": 77500.0,
-  "spot_cvd": 119.8614,
-  "perp_cvd": 109.591,
-  "divergence": 10.2704,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "spot_cvd": 110.9882,
+  "perp_cvd": 79.693,
+  "divergence": 31.2952,
+  "regime": "Spot-Led Expansion",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity above VAH at $77,650.62. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($77,550.00)."
+  "summary": "Spot net buying is outpacing perpetual swap delta, driving price marginally above the 60-minute Value Area High at 77,650. Sustained acceptance above VAH is required to confirm bullish continuation given heavy perpetual volume domination.",
+  "risk": "Failed auction above VAH (77,650) triggering a mean-reversion move back toward the POC at 77,550."
 }
