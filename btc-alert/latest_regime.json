@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789352052,
-  "price": 77168.3,
+  "timestamp": 1789352352,
+  "price": 77201.9,
   "poc": 76850.0,
-  "vah": 77050.0,
+  "vah": 77100.0,
   "val": 76650.0,
-  "spot_cvd": -32.1738,
-  "perp_cvd": 149.965,
-  "divergence": -182.1388,
+  "spot_cvd": -29.9326,
+  "perp_cvd": 124.073,
+  "divergence": -154.0056,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has expanded above VAH driven by aggressive derivative buying despite net spot selling, creating a notable negative CVD divergence. Without spot market follow-through, this perp-led expansion faces heightened risk of exhaustion and rapid mean-reversion back into the value area.",
-  "risk": "Perp long liquidation cascade upon rejection back inside VAH (77050.0)"
+  "summary": "Price testing liquidity above VAH at $77,201.90. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($76,850.00)."
 }
