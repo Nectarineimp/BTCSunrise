@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789359854,
-  "price": 77645.8,
+  "timestamp": 1789360000,
+  "price": 77665.3,
   "poc": 77500.0,
   "vah": 77650.0,
-  "val": 77450.0,
-  "spot_cvd": 118.4474,
-  "perp_cvd": -77.862,
-  "divergence": 196.3094,
+  "val": 77500.0,
+  "spot_cvd": 107.0275,
+  "perp_cvd": -23.329,
+  "divergence": 130.3565,
   "regime": "Spot-Led Expansion",
-  "uncertainty": "Medium",
-  "summary": "Aggressive spot accumulation (+115.88 BTC CVD) is absorbing perpetual futures selling and driving price acceptance above VAH at 77650. This positive CVD divergence confirms organic spot-led demand, favoring upside continuation if price remains established above the value area boundary.",
-  "risk": "Loss of VAH acceptance (77650) triggering a mean-reverting liquidation cascade back into the Value Area toward POC (77500)."
+  "uncertainty": "Low",
+  "summary": "Spot CVD accumulation is driving price above the Value Area High of 77,650 despite persistent perp selling delta. This spot-led breakout indicates organic buying interest, favoring continuation as long as VAH holds as support.",
+  "risk": "Failure to hold VAH at 77,650 on a retest, triggering a mean-reversion back toward the POC at 77,500."
 }
