@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789356853,
-  "price": 77706.1,
+  "timestamp": 1789357153,
+  "price": 77580.1,
   "poc": 77550.0,
-  "vah": 77750.0,
-  "val": 77350.0,
-  "spot_cvd": 51.3261,
-  "perp_cvd": -292.846,
-  "divergence": 344.1721,
-  "regime": "Spot-Led Expansion",
-  "uncertainty": "Medium",
-  "summary": "Price has accepted above the Value Area High driven by steady spot accumulation absorbing persistent perp shorting. Upside bias remains intact while spot CVD leads the breakout, though high derivative volume relative to spot warrants monitoring.",
-  "risk": "Acceptance back inside the Value Area below 77700 VAH risking a mean-reversion drift toward POC at 77550."
+  "vah": 77800.0,
+  "val": 77500.0,
+  "spot_cvd": 65.2754,
+  "perp_cvd": -245.184,
+  "divergence": 310.4594,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($77,550.00). Spot CVD delta is positive (+65.28 BTC).",
+  "risk": "Range chop between VAL ($77,500.00) and VAH ($77,800.00)."
 }
