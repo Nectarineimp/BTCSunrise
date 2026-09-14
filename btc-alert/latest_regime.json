@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789356553,
-  "price": 77802.4,
+  "timestamp": 1789356853,
+  "price": 77706.1,
   "poc": 77550.0,
-  "vah": 77600.0,
-  "val": 77400.0,
-  "spot_cvd": 66.6109,
-  "perp_cvd": 229.725,
-  "divergence": -163.1141,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "vah": 77750.0,
+  "val": 77350.0,
+  "spot_cvd": 51.3261,
+  "perp_cvd": -292.846,
+  "divergence": 344.1721,
+  "regime": "Spot-Led Expansion",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity above VAH at $77,802.40. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($77,550.00)."
+  "summary": "Price has accepted above the Value Area High driven by steady spot accumulation absorbing persistent perp shorting. Upside bias remains intact while spot CVD leads the breakout, though high derivative volume relative to spot warrants monitoring.",
+  "risk": "Acceptance back inside the Value Area below 77700 VAH risking a mean-reversion drift toward POC at 77550."
 }
