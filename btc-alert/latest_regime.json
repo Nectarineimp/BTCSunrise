@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789484578,
-  "price": 75687.8,
+  "timestamp": 1789485178,
+  "price": 75886.4,
   "poc": 75750.0,
-  "vah": 76400.0,
-  "val": 75650.0,
-  "spot_cvd": 19.9356,
-  "perp_cvd": 35.838,
-  "divergence": -15.9024,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "vah": 76250.0,
+  "val": 75600.0,
+  "spot_cvd": -20.3334,
+  "perp_cvd": 67.753,
+  "divergence": -88.0864,
+  "regime": "Mean Reverting / Consolidation",
   "uncertainty": "High",
-  "summary": "Perpetual aggressive buying is failing to lift price above the Value Area Low due to minimal spot support. This pronounced leverage bias creates significant downside risk via long liquidation cascades if 75,700 is not reclaimed.",
-  "risk": "Cascade of long liquidations upon rejection at Value Area Low (75,700)."
+  "summary": "Price rotating inside Value Area near POC ($75,750.00). Spot CVD delta is negative (-20.33 BTC).",
+  "risk": "Range chop between VAL ($75,600.00) and VAH ($76,250.00)."
 }
