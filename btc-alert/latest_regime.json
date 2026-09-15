@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789483978,
-  "price": 76118.87,
-  "poc": 76400.0,
-  "vah": 76450.0,
+  "timestamp": 1789484278,
+  "price": 75739.6,
+  "poc": 76150.0,
+  "vah": 76500.0,
   "val": 76150.0,
-  "spot_cvd": -26.2676,
-  "perp_cvd": -137.79,
-  "divergence": 111.5224,
+  "spot_cvd": 19.9356,
+  "perp_cvd": -5.377,
+  "divergence": 25.3126,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Aggressive perpetual short selling has pushed price marginally below VAL while spot CVD remains relatively flat, highlighting heavy leverage dominance over spot flows. Without spot distribution confirming the move, the breakdown carries elevated risk of a short-squeeze mean reversion back toward the POC.",
-  "risk": "Absence of spot absorption below VAL leading to acceleration in leverage-driven liquidation cascades."
+  "summary": "Price testing liquidity below VAL at $75,739.60. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($76,150.00)."
 }
