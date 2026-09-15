@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789486678,
-  "price": 76303.7,
+  "timestamp": 1789486978,
+  "price": 76358.8,
   "poc": 75750.0,
-  "vah": 76050.0,
+  "vah": 76150.0,
   "val": 75650.0,
-  "spot_cvd": 43.7463,
-  "perp_cvd": 208.701,
-  "divergence": -164.9547,
+  "spot_cvd": 68.5283,
+  "perp_cvd": 216.871,
+  "divergence": -148.3427,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has pushed above VAH at 76,050, but the rally is disproportionately driven by perpetual swap leverage rather than spot demand. This underlying CVD divergence leaves the breakout vulnerable to long exhaustion and a sharp re-entry into the value area.",
-  "risk": "Acceptance back inside VAH (76,050) triggering long position liquidations."
+  "summary": "Price testing liquidity above VAH at $76,358.80. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($75,750.00)."
 }
