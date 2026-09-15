@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789495086,
-  "price": 76937.2,
-  "poc": 76250.0,
-  "vah": 76900.0,
-  "val": 76150.0,
-  "spot_cvd": 75.8425,
-  "perp_cvd": 229.702,
-  "divergence": -153.8595,
+  "timestamp": 1789499632,
+  "price": 75868.3,
+  "poc": 76600.0,
+  "vah": 76850.0,
+  "val": 76500.0,
+  "spot_cvd": 18.1576,
+  "perp_cvd": -24.614,
+  "divergence": 42.7716,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has pushed above VAH at 76,900, but market depth indicates the move is heavily driven by perpetual futures leverage rather than organic spot demand. Without spot volume validation, the current extension remains vulnerable to a long squeeze and rotation back toward the POC at 76,250.",
-  "risk": "Lack of spot CVD absorption leading to a derivative liquidation cascade back inside the Value Area."
+  "summary": "Price testing liquidity below VAL at $75,868.30. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($76,600.00)."
 }

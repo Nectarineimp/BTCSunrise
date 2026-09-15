@@ -1,0 +1,50 @@
+<!-- BTC Microstructure Dynamic Feed -->
+<div id="btc-microstructure-wrapper" style="min-height: 120px; transition: opacity 0.2s ease;">
+  <div id="btc-microstructure-feed">
+    <p style="color: #666; font-style: italic;">Loading live microstructure analysis...</p>
+  </div>
+  <div style="font-size: 0.75rem; color: #888; text-align: right; margin-top: 6px;">
+    Auto-updates every 5m &bull; Last checked: <span id="btc-feed-timestamp">--:--:--</span>
+  </div>
+</div>
+
+<script>
+(function() {
+  const FEED_URL = 'https://nectarineimp.github.io/BTCSunrise-datashare/btc-alerts/btc-alert-latest.html';
+  const REFRESH_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
+
+  async function fetchMicrostructureFeed() {
+    const feedContainer = document.getElementById('btc-microstructure-feed');
+    const timeDisplay = document.getElementById('btc-feed-timestamp');
+    
+    try {
+      // Append cache-busting timestamp to bypass GitHub Pages / browser caching
+      const response = await fetch(`${FEED_URL}?_t=${Date.now()}`);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} - ${response.statusText}`);
+      }
+
+      const htmlContent = await response.text();
+      
+      if (feedContainer) {
+        feedContainer.innerHTML = htmlContent;
+      }
+      if (timeDisplay) {
+        timeDisplay.textContent = new Date().toLocaleTimeString();
+      }
+    } catch (err) {
+      console.warn('Microstructure feed fetch failed:', err);
+      if (feedContainer && feedContainer.innerHTML.includes('Loading')) {
+        feedContainer.innerHTML = '<p style="color: #c00;">Live alert feed temporarily unavailable.</p>';
+      }
+    }
+  }
+
+  // Initial fetch on page load
+  fetchMicrostructureFeed();
+
+  // Polling loop
+  setInterval(fetchMicrostructureFeed, REFRESH_INTERVAL_MS);
+})();
+</script>
