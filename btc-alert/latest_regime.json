@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789451858,
-  "price": 77605.9,
+  "timestamp": 1789452158,
+  "price": 77658.7,
   "poc": 77400.0,
-  "vah": 77550.0,
+  "vah": 77600.0,
   "val": 77350.0,
-  "spot_cvd": 32.8339,
-  "perp_cvd": -70.322,
-  "divergence": 103.1559,
-  "regime": "Spot-Led Expansion",
+  "spot_cvd": 41.3195,
+  "perp_cvd": 68.81,
+  "divergence": -27.4905,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has broken out above VAH driven by positive spot accumulation despite persistent derivative shorting. This spot-led absorption above value area structure sets up squeeze potential if perps are forced to cover.",
-  "risk": "Loss of acceptance above VAH (77,550) triggering a mean-reversion rotation back toward POC (77,400)."
+  "summary": "Price testing liquidity above VAH at $77,658.70. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($77,400.00)."
 }
