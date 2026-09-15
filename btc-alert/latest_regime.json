@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789458462,
-  "price": 77017.6,
+  "timestamp": 1789458762,
+  "price": 76914.4,
   "poc": 77200.0,
   "vah": 77300.0,
-  "val": 77100.0,
-  "spot_cvd": 47.1093,
-  "perp_cvd": -243.158,
-  "divergence": 290.2673,
+  "val": 77050.0,
+  "spot_cvd": 30.8284,
+  "perp_cvd": -240.845,
+  "divergence": 271.6734,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity below VAL at $77,017.60. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($77,200.00)."
+  "summary": "Price has acceptance below VAL driven by aggressive derivative selling while spot CVD displays passive positive absorption. The pronounced spot-perp CVD divergence indicates potential short seller exhaustion if spot demand continues to defend sub-VAL levels.",
+  "risk": "Spot absorption failure triggering secondary derivative-led liquidation cascades below 76,900."
 }
