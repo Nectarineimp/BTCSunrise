@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789492986,
-  "price": 76276.9,
-  "poc": 76400.0,
-  "vah": 76500.0,
-  "val": 76250.0,
-  "spot_cvd": 43.6162,
-  "perp_cvd": -169.007,
-  "divergence": 212.6232,
-  "regime": "Mean Reverting / Consolidation",
-  "uncertainty": "High",
-  "summary": "Price rotating inside Value Area near POC ($76,400.00). Spot CVD delta is positive (+43.62 BTC).",
-  "risk": "Range chop between VAL ($76,250.00) and VAH ($76,500.00)."
+  "timestamp": 1789493286,
+  "price": 76439.7,
+  "poc": 76350.0,
+  "vah": 76450.0,
+  "val": 76200.0,
+  "spot_cvd": 72.2659,
+  "perp_cvd": -143.645,
+  "divergence": 215.9109,
+  "regime": "Absorption at Resistance",
+  "uncertainty": "Medium",
+  "summary": "Positive spot CVD is actively absorbing aggressive perpetual contract selling at the Value Area High of 76,450. Continued spot demand is required to confirm acceptance above VAH and prevent a mean-reversion rotation back into the value area.",
+  "risk": "Failure to maintain acceptance above 76,450 VAH triggering aggressive perp-led selling back toward the 76,350 POC."
 }
