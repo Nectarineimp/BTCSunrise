@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789472574,
-  "price": 76872.8,
+  "timestamp": 1789472875,
+  "price": 76886.0,
   "poc": 77000.0,
   "vah": 77150.0,
-  "val": 76950.0,
-  "spot_cvd": 104.1697,
-  "perp_cvd": 70.419,
-  "divergence": 33.7507,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "val": 76900.0,
+  "spot_cvd": 73.2198,
+  "perp_cvd": -67.049,
+  "divergence": 140.2688,
+  "regime": "Mean Reverting / Consolidation",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity below VAL at $76,872.80. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($77,000.00)."
+  "summary": "Price is currently trading below the Value Area Low ($76,900), but significant positive spot CVD divergence (+53.54) indicates institutional spot absorption defending lower levels. A successful reclaim of the VAL would signal a mean-reversion rotation back toward the Point of Control at $77,000.",
+  "risk": "Failure to reclaim VAL ($76,900) triggering perp-driven downside momentum despite spot CVD absorption."
 }
