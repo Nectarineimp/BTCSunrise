@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789493286,
-  "price": 76439.7,
+  "timestamp": 1789493586,
+  "price": 76655.1,
   "poc": 76350.0,
   "vah": 76450.0,
   "val": 76200.0,
-  "spot_cvd": 72.2659,
-  "perp_cvd": -143.645,
-  "divergence": 215.9109,
-  "regime": "Absorption at Resistance",
+  "spot_cvd": 80.171,
+  "perp_cvd": -107.174,
+  "divergence": 187.345,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Positive spot CVD is actively absorbing aggressive perpetual contract selling at the Value Area High of 76,450. Continued spot demand is required to confirm acceptance above VAH and prevent a mean-reversion rotation back into the value area.",
-  "risk": "Failure to maintain acceptance above 76,450 VAH triggering aggressive perp-led selling back toward the 76,350 POC."
+  "summary": "Price testing liquidity above VAH at $76,655.10. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($76,350.00)."
 }
