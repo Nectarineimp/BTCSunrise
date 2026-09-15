@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789469273,
-  "price": 77076.7,
+  "timestamp": 1789469573,
+  "price": 77138.0,
   "poc": 76950.0,
-  "vah": 77000.0,
+  "vah": 77050.0,
   "val": 76850.0,
-  "spot_cvd": 80.0036,
-  "perp_cvd": 100.726,
-  "divergence": -20.7224,
-  "regime": "Spot-Led Expansion",
-  "uncertainty": "Low",
-  "summary": "Spot CVD delta is significantly outstripping perp CVD as price establishes acceptance above VAH at $77,000. This spot-driven demand confirms structural expansion rather than a speculative leverage squeeze.",
-  "risk": "A drop back inside the value area below $77,000 VAH would signal a false breakout and trigger mean reversion to the $76,950 POC."
+  "spot_cvd": 80.0869,
+  "perp_cvd": 44.708,
+  "divergence": 35.3789,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "uncertainty": "Medium",
+  "summary": "Price testing liquidity above VAH at $77,138.00. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($76,950.00)."
 }
