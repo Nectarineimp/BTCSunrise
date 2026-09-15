@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789477677,
-  "price": 77042.0,
+  "timestamp": 1789477977,
+  "price": 77004.0,
   "poc": 76900.0,
   "vah": 77050.0,
   "val": 76850.0,
-  "spot_cvd": 74.6329,
-  "perp_cvd": 110.661,
-  "divergence": -36.0281,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "spot_cvd": 82.1426,
+  "perp_cvd": 38.55,
+  "divergence": 43.5926,
+  "regime": "Spot-Led Expansion",
   "uncertainty": "Medium",
-  "summary": "Price has broken above VAH at 77050, but the move is disproportionately driven by perpetual leverage rather than spot volume. Without strong spot absorption to sustain higher prices, the expansion risks an exhaustion-driven mean reversion back toward the POC at 76900.",
-  "risk": "Lack of spot CVD expansion to back perp positioning, heightening long liquidation risk back into the value area."
+  "summary": "Spot cumulative volume delta is actively outpacing perpetual futures, driving price marginally above the Value Area High at $77,050. This spot-led delta expansion signals organic buying interest, though acceptance above VAH requires sustained volume confirmation.",
+  "risk": "Failure to maintain acceptance above VAH ($77,050) triggering a mean-reverting rotation back toward the POC at $76,900."
 }
