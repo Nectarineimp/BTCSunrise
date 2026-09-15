@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789484278,
-  "price": 75739.6,
-  "poc": 76150.0,
-  "vah": 76500.0,
-  "val": 76150.0,
+  "timestamp": 1789484578,
+  "price": 75687.8,
+  "poc": 75750.0,
+  "vah": 76400.0,
+  "val": 75650.0,
   "spot_cvd": 19.9356,
-  "perp_cvd": -5.377,
-  "divergence": 25.3126,
+  "perp_cvd": 35.838,
+  "divergence": -15.9024,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price testing liquidity below VAL at $75,739.60. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($76,150.00)."
+  "uncertainty": "High",
+  "summary": "Perpetual aggressive buying is failing to lift price above the Value Area Low due to minimal spot support. This pronounced leverage bias creates significant downside risk via long liquidation cascades if 75,700 is not reclaimed.",
+  "risk": "Cascade of long liquidations upon rejection at Value Area Low (75,700)."
 }
