@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789494486,
-  "price": 77064.4,
-  "poc": 76350.0,
-  "vah": 76750.0,
+  "timestamp": 1789494786,
+  "price": 77035.2,
+  "poc": 76250.0,
+  "vah": 76850.0,
   "val": 76150.0,
-  "spot_cvd": 81.6865,
-  "perp_cvd": 255.75,
-  "divergence": -174.0635,
+  "spot_cvd": 78.0286,
+  "perp_cvd": 238.209,
+  "divergence": -160.1804,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price testing liquidity above VAH at $77,064.40. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($76,350.00)."
+  "summary": "Price testing liquidity above VAH at $77,035.20. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($76,250.00)."
 }
