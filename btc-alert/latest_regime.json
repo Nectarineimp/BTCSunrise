@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789491784,
-  "price": 76322.47,
-  "poc": 76400.0,
-  "vah": 76500.0,
-  "val": 76350.0,
-  "spot_cvd": 84.9527,
-  "perp_cvd": -97.056,
-  "divergence": 182.0087,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Spot CVD accumulation (+84.95 BTC) contrasting with aggressive perp shorting (-97.06 BTC) below Value Area Low indicates passive spot absorption of derivative selling pressure. Failure of perp aggressive sellers to drive sustained price expansion below 76,350 VAL elevates the probability of a short squeeze back toward the 76,400 POC.",
-  "risk": "Acceptance below 76,350 VAL driven by a sudden fade in spot absorption."
+  "timestamp": 1789492084,
+  "price": 76256.33,
+  "poc": 76350.0,
+  "vah": 76450.0,
+  "val": 76250.0,
+  "spot_cvd": 96.6874,
+  "perp_cvd": -114.476,
+  "divergence": 211.1634,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($76,350.00). Spot CVD delta is positive (+96.69 BTC).",
+  "risk": "Range chop between VAL ($76,250.00) and VAH ($76,450.00)."
 }
