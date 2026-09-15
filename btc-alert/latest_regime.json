@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789488478,
-  "price": 76388.6,
+  "timestamp": 1789488778,
+  "price": 76332.0,
   "poc": 76400.0,
-  "vah": 76600.0,
-  "val": 76350.0,
-  "spot_cvd": 146.355,
-  "perp_cvd": 166.457,
-  "divergence": -20.102,
-  "regime": "Mean Reverting / Consolidation",
-  "uncertainty": "High",
-  "summary": "Price rotating inside Value Area near POC ($76,400.00). Spot CVD delta is positive (+146.35 BTC).",
-  "risk": "Range chop between VAL ($76,350.00) and VAH ($76,600.00)."
+  "vah": 76550.0,
+  "val": 76300.0,
+  "spot_cvd": 156.7583,
+  "perp_cvd": 134.333,
+  "divergence": 22.4253,
+  "regime": "Absorption at Resistance",
+  "uncertainty": "Medium",
+  "summary": "Aggressive buyers are attempting to bid price back into value, but positive spot and perp CVD are currently met with passive limit absorption below Value Area Low. Failure to reclaim 76,300 (VAL) risks a deeper directional rotation down toward lower liquidity pools.",
+  "risk": "Persistent failure to reclaim 76,300 VAL despite positive Spot CVD delta, confirming passive limit seller dominance."
 }
