@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789470773,
-  "price": 77142.38,
-  "poc": 76950.0,
-  "vah": 77150.0,
+  "timestamp": 1789471073,
+  "price": 77101.47,
+  "poc": 77000.0,
+  "vah": 77100.0,
   "val": 76900.0,
-  "spot_cvd": 107.665,
-  "perp_cvd": 204.426,
-  "divergence": -96.761,
+  "spot_cvd": 83.801,
+  "perp_cvd": 141.586,
+  "divergence": -57.785,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has pushed above VAH at 77150, but the breakout is heavily leverage-driven with perpetual CVD significantly outpacing spot volume. Without aggressive spot demand backing this expansion, the move remains vulnerable to exhaustion and a sharp reversion into the value area.",
-  "risk": "Lack of spot CVD absorption risking a long liquidation squeeze back below VAH towards POC."
+  "summary": "Perpetual swaps are driving the marginal breakout above the 77,100 VAH with heavy relative volume, while spot aggressive buying trails significantly. Without spot volume confirmation, this derivative-led push risks a sharp rejection back into the value area.",
+  "risk": "Lack of spot CVD follow-through above VAH leading to a leverage long liquidation back toward the POC."
 }
