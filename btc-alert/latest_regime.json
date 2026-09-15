@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789471073,
-  "price": 77101.47,
+  "timestamp": 1789471373,
+  "price": 76937.3,
   "poc": 77000.0,
-  "vah": 77100.0,
-  "val": 76900.0,
-  "spot_cvd": 83.801,
-  "perp_cvd": 141.586,
-  "divergence": -57.785,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "vah": 77150.0,
+  "val": 76950.0,
+  "spot_cvd": 96.9073,
+  "perp_cvd": 49.602,
+  "divergence": 47.3053,
+  "regime": "Spot-Led Expansion",
   "uncertainty": "Medium",
-  "summary": "Perpetual swaps are driving the marginal breakout above the 77,100 VAH with heavy relative volume, while spot aggressive buying trails significantly. Without spot volume confirmation, this derivative-led push risks a sharp rejection back into the value area.",
-  "risk": "Lack of spot CVD follow-through above VAH leading to a leverage long liquidation back toward the POC."
+  "summary": "Spot CVD is strongly outstripping perpetual delta despite price dipping slightly below the Value Area Low at 76,950. This persistent spot-side absorption points to defensive spot accumulation, setting up a potential swift mean-reversion drive back toward the 77,000 POC.",
+  "risk": "Sustained acceptance below VAL (76,950) converting spot absorption into forced liquidation cascades."
 }
