@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789449758,
-  "price": 77379.73,
+  "timestamp": 1789450058,
+  "price": 77401.0,
   "poc": 77550.0,
   "vah": 77650.0,
-  "val": 77400.0,
-  "spot_cvd": -123.8343,
-  "perp_cvd": -435.539,
-  "divergence": 311.7047,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Bitcoin has broken below the Value Area Low at 77,400, driven predominantly by aggressive perpetual swap market selling rather than spot volume. The heavy derivative imbalance relative to muted spot CVD leaves aggressive short positions exposed to potential exhaustion and a sharp squeeze back toward the POC at 77,550.",
-  "risk": "Lack of spot sell-side follow-through risking a violent mean-reversion squeeze into the value area."
+  "val": 77350.0,
+  "spot_cvd": -22.7181,
+  "perp_cvd": -364.155,
+  "divergence": 341.4369,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($77,550.00). Spot CVD delta is negative (-22.72 BTC).",
+  "risk": "Range chop between VAL ($77,350.00) and VAH ($77,650.00)."
 }
