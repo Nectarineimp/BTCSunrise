@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789472875,
-  "price": 76886.0,
+  "timestamp": 1789473175,
+  "price": 76883.0,
   "poc": 77000.0,
-  "vah": 77150.0,
-  "val": 76900.0,
-  "spot_cvd": 73.2198,
-  "perp_cvd": -67.049,
-  "divergence": 140.2688,
+  "vah": 77050.0,
+  "val": 76850.0,
+  "spot_cvd": 59.3927,
+  "perp_cvd": -85.954,
+  "divergence": 145.3467,
   "regime": "Mean Reverting / Consolidation",
-  "uncertainty": "Medium",
-  "summary": "Price is currently trading below the Value Area Low ($76,900), but significant positive spot CVD divergence (+53.54) indicates institutional spot absorption defending lower levels. A successful reclaim of the VAL would signal a mean-reversion rotation back toward the Point of Control at $77,000.",
-  "risk": "Failure to reclaim VAL ($76,900) triggering perp-driven downside momentum despite spot CVD absorption."
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($77,000.00). Spot CVD delta is positive (+59.39 BTC).",
+  "risk": "Range chop between VAL ($76,850.00) and VAH ($77,050.00)."
 }
