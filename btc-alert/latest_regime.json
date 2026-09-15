@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789499632,
-  "price": 75868.3,
+  "timestamp": 1789500232,
+  "price": 75989.8,
   "poc": 76600.0,
   "vah": 76850.0,
-  "val": 76500.0,
-  "spot_cvd": 18.1576,
-  "perp_cvd": -24.614,
-  "divergence": 42.7716,
+  "val": 76450.0,
+  "spot_cvd": 22.7752,
+  "perp_cvd": 68.045,
+  "divergence": -45.2698,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price testing liquidity below VAL at $75,868.30. Delta volume lacks high-conviction institutional participation.",
-  "risk": "Mean-reversion trap back toward Value Area POC ($76,600.00)."
+  "uncertainty": "High",
+  "summary": "Price trading below Value Area Low alongside positive perpetual CVD indicates trapped long leverage and passive spot selling. Without spot demand confirmation, the market remains vulnerable to a long liquidation cascade.",
+  "risk": "Cascading perpetual long liquidations due to spot bid absence below VAL."
 }
