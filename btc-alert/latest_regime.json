@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789490581,
-  "price": 76307.3,
+  "timestamp": 1789490881,
+  "price": 76372.4,
   "poc": 76400.0,
   "vah": 76500.0,
   "val": 76300.0,
-  "spot_cvd": 97.7753,
-  "perp_cvd": 81.022,
-  "divergence": 16.7533,
+  "spot_cvd": 74.0924,
+  "perp_cvd": 38.082,
+  "divergence": 36.0104,
   "regime": "Mean Reverting / Consolidation",
-  "uncertainty": "Medium",
-  "summary": "Despite price trading below the Value Area Low at 76,300, positive spot and perp CVD deltas indicate strong spot-led market buying into the dip. This divergence between positive delta and price location suggests passive seller absorption and a high likelihood of a mean-reversion move back toward the POC at 76,400.",
-  "risk": "Persistent price acceptance below the 76,300 VAL which could trigger aggressive momentum selling if spot absorption exhausts."
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($76,400.00). Spot CVD delta is positive (+74.09 BTC).",
+  "risk": "Range chop between VAL ($76,300.00) and VAH ($76,500.00)."
 }
