@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789526606,
-  "price": 75973.3,
-  "poc": 75450.0,
-  "vah": 75900.0,
-  "val": 75400.0,
-  "spot_cvd": 5.6792,
-  "perp_cvd": 59.755,
-  "divergence": -54.0758,
+  "timestamp": 1789591305,
+  "price": 76066.0,
+  "poc": 76200.0,
+  "vah": 76350.0,
+  "val": 76100.0,
+  "spot_cvd": -3.9047,
+  "perp_cvd": -5.836,
+  "divergence": 1.9313,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "High",
-  "summary": "Price has broken out above VAH driven almost entirely by aggressive perpetual swaps, with negligible spot CVD delta confirming a heavy leverage skew. This lack of spot buying absorption creates high vulnerability for a sharp long squeeze back into the Value Area.",
-  "risk": "Cascading long liquidation risk back into the Value Area toward POC (75,450) due to severe spot CVD non-confirmation."
+  "uncertainty": "Medium",
+  "summary": "Price testing liquidity below VAL at $76,066.00. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($76,200.00)."
 }
