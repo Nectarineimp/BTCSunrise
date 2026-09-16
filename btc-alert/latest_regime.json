@@ -1,14 +1,14 @@
 {
-  "timestamp": 1789500232,
-  "price": 75989.8,
-  "poc": 76600.0,
-  "vah": 76850.0,
-  "val": 76450.0,
-  "spot_cvd": 22.7752,
-  "perp_cvd": 68.045,
-  "divergence": -45.2698,
+  "timestamp": 1789526606,
+  "price": 75973.3,
+  "poc": 75450.0,
+  "vah": 75900.0,
+  "val": 75400.0,
+  "spot_cvd": 5.6792,
+  "perp_cvd": 59.755,
+  "divergence": -54.0758,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "High",
-  "summary": "Price trading below Value Area Low alongside positive perpetual CVD indicates trapped long leverage and passive spot selling. Without spot demand confirmation, the market remains vulnerable to a long liquidation cascade.",
-  "risk": "Cascading perpetual long liquidations due to spot bid absence below VAL."
+  "summary": "Price has broken out above VAH driven almost entirely by aggressive perpetual swaps, with negligible spot CVD delta confirming a heavy leverage skew. This lack of spot buying absorption creates high vulnerability for a sharp long squeeze back into the Value Area.",
+  "risk": "Cascading long liquidation risk back into the Value Area toward POC (75,450) due to severe spot CVD non-confirmation."
 }
