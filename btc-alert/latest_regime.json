@@ -1,14 +1,14 @@
 {
-  "timestamp": 1790253212,
-  "price": 83334.9,
+  "timestamp": 1790253424,
+  "price": 83383.59,
   "poc": 83400.0,
   "vah": 83550.0,
   "val": 83350.0,
-  "spot_cvd": -27.877,
-  "perp_cvd": 163.311,
-  "divergence": -191.188,
+  "spot_cvd": -21.5352,
+  "perp_cvd": 119.422,
+  "divergence": -140.9572,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Low",
-  "summary": "Price breakdown below the Value Area Low is driven by spot distribution despite aggressive perpetual buying interest. This clear spot-perp CVD divergence leaves overleveraged perpetual longs trapped, significantly elevating the risk of a downside liquidation cascade.",
-  "risk": "Accelerating perpetual long liquidations driving price slippage below key downside liquidity pools."
+  "uncertainty": "Medium",
+  "summary": "Price has fallen below the Value Area Low at 83,350 as aggressive perpetual buying fails to overcome spot market distribution. This severe CVD divergence leaves overextended derivative longs exposed to a potential cascade if spot selling continues.",
+  "risk": "Cascading derivative long liquidations due to failure to reclaim the Value Area Low."
 }
