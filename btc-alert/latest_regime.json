@@ -1,14 +1,14 @@
 {
-  "timestamp": 1792067027,
-  "price": 81006.0,
-  "poc": 80950.0,
-  "vah": 81050.0,
-  "val": 80850.0,
-  "spot_cvd": -118.7003,
-  "perp_cvd": -160.731,
-  "divergence": 42.0307,
-  "regime": "Absorption at Resistance",
-  "uncertainty": "Medium",
-  "summary": "Despite negative spot and perp CVD over the last hour, price remains pegged at the Value Area High, indicating passive absorption of aggressive sell flow. A failure for spot buyers to step in with positive delta leaves the breakout above $81,050 vulnerable to a rapid pull-back.",
-  "risk": "Breakdown below VAH ($81,050) triggering a liquidity sweep down to the POC at $80,850."
+  "timestamp": 1792152305,
+  "price": 82405.0,
+  "poc": 82700.0,
+  "vah": 82850.0,
+  "val": 82550.0,
+  "spot_cvd": 106.5419,
+  "perp_cvd": 302.184,
+  "divergence": -195.6421,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "uncertainty": "High",
+  "summary": "Price has accepted below Value Area Low at 82,550 despite strong perpetual buying delta, indicating aggressive derivative longs are getting absorbed by passive supply. The absence of spot market participation leaves these leveraged long positions vulnerable to a liquidation cascade.",
+  "risk": "Long liquidation cascade driven by trapped derivative positions below Value Area Low"
 }
