@@ -1,14 +1,14 @@
 {
-  "timestamp": 1793105358,
-  "price": 80377.5,
-  "poc": 80300.0,
-  "vah": 80400.0,
-  "val": 80200.0,
-  "spot_cvd": 51.3232,
-  "perp_cvd": 156.747,
-  "divergence": -105.4238,
+  "timestamp": 1793191402,
+  "price": 80772.0,
+  "poc": 80950.0,
+  "vah": 81250.0,
+  "val": 80850.0,
+  "spot_cvd": -62.4935,
+  "perp_cvd": -400.363,
+  "divergence": 337.8696,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price is marginally attempting a breakout above VAH, heavily driven by aggressive perpetual buying while spot delta lags. The over-reliance on leverage over spot accumulation leaves the move vulnerable to exhaustion and rapid mean-reversion.",
-  "risk": "Long liquidation cascade and rejection back inside the Value Area below 80,400 VAH."
+  "summary": "Price has broken below the Value Area Low driven primarily by aggressive perpetual futures selling, while spot CVD shows minimal negative delta. This heavy derivative-driven push creates potential leverage exhaustion risk if spot passive liquidity absorbs the aggression.",
+  "risk": "Perpetual short squeeze upon reclaiming the Value Area Low at 80,850"
 }
