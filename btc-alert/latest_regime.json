@@ -1,14 +1,14 @@
 {
-  "timestamp": 1793709697,
-  "price": 77475.0,
-  "poc": 77400.0,
-  "vah": 77500.0,
-  "val": 77100.0,
-  "spot_cvd": 35.8421,
-  "perp_cvd": 356.837,
-  "divergence": -320.995,
-  "regime": "Mean Reverting / Consolidation",
-  "uncertainty": "High",
-  "summary": "Price rotating inside Value Area near POC ($77,400.00). Spot CVD delta is positive (+35.84 BTC).",
-  "risk": "Range chop between VAL ($77,100.00) and VAH ($77,500.00)."
+  "timestamp": 1793797305,
+  "price": 78428.1,
+  "poc": 78250.0,
+  "vah": 78350.0,
+  "val": 78150.0,
+  "spot_cvd": -80.0298,
+  "perp_cvd": -257.503,
+  "divergence": 177.4732,
+  "regime": "Leverage Squeeze / Exhaustion Risk",
+  "uncertainty": "Medium",
+  "summary": "Price has traded above VAH despite negative 60-minute net CVD across spot and perp venues, pointing to heavy passive buy absorption of market sellers. The derivative-dominated volume profile creates elevated exhaustion risk if passive limit bids pull back from these higher levels.",
+  "risk": "Re-entry below VAH (78,350) accelerating mean-reversion toward the POC (78,250) under persistent spot sell delta."
 }
