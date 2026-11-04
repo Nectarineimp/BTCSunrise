@@ -1,14 +1,14 @@
 {
-  "timestamp": 1793797305,
-  "price": 78428.1,
-  "poc": 78250.0,
-  "vah": 78350.0,
-  "val": 78150.0,
-  "spot_cvd": -80.0298,
-  "perp_cvd": -257.503,
-  "divergence": 177.4732,
+  "timestamp": 1793808106,
+  "price": 80774.4,
+  "poc": 78850.0,
+  "vah": 80150.0,
+  "val": 78550.0,
+  "spot_cvd": 131.8213,
+  "perp_cvd": 1065.039,
+  "divergence": -933.2177,
   "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "Medium",
-  "summary": "Price has traded above VAH despite negative 60-minute net CVD across spot and perp venues, pointing to heavy passive buy absorption of market sellers. The derivative-dominated volume profile creates elevated exhaustion risk if passive limit bids pull back from these higher levels.",
-  "risk": "Re-entry below VAH (78,350) accelerating mean-reversion toward the POC (78,250) under persistent spot sell delta."
+  "uncertainty": "High",
+  "summary": "Price has expanded above VAH at 80150, but momentum is heavily skewed toward perpetual swap leverage with minimal spot participation (+131.8 spot vs +1072.2 perp CVD). This structural reliance on derivatives leaves the breakout vulnerable to long liquidation cascades and mean reversion back into the value area.",
+  "risk": "Spot volume non-confirmation leading to aggressive perp unwinding below VAH (80150.0)."
 }
