@@ -1,14 +1,14 @@
 {
-  "timestamp": 1793886603,
-  "price": 79829.1,
-  "poc": 79650.0,
-  "vah": 79800.0,
-  "val": 79600.0,
-  "spot_cvd": 5.4786,
-  "perp_cvd": 221.154,
-  "divergence": -215.6754,
-  "regime": "Leverage Squeeze / Exhaustion Risk",
-  "uncertainty": "High",
-  "summary": "Price has pushed above VAH driven almost exclusively by perpetual aggressive buying while spot accumulation remains largely absent. This extreme perp-led divergence creates significant vulnerability to passive absorption and long liquidation cascades.",
-  "risk": "Lack of spot volume confirmation leading to a failed breakout and violent unwind back into the Value Area."
+  "timestamp": 1793942733,
+  "price": 75419.6,
+  "poc": 75600.0,
+  "vah": 75800.0,
+  "val": 75550.0,
+  "spot_cvd": -198.9633,
+  "perp_cvd": -180.144,
+  "divergence": -18.8193,
+  "regime": "Spot-Led Expansion",
+  "uncertainty": "Low",
+  "summary": "Aggressive spot-led selling has forced price below the Value Area Low of 75,550, backed by aligned negative spot and perpetual CVD deltas. This strong net-selling conviction maintains a bearish expansion bias while price trades outside the established value area.",
+  "risk": "Short-covering squeeze forcing price back above Value Area Low (75,550) towards POC (75,600)."
 }
