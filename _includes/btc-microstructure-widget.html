@@ -12,6 +12,7 @@
 (function() {
   const FEED_URL = 'https://nectarineimp.github.io/BTCSunrise-datashare/btc-alerts/btc-alert-latest.html';
   const REFRESH_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
+  const MAX_AGE_MS = 10 * 60 * 1000; // 10 minutes
 
   async function fetchMicrostructureFeed() {
     const feedContainer = document.getElementById('btc-microstructure-feed');
@@ -23,6 +24,23 @@
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status} - ${response.statusText}`);
+      }
+
+      // Check file age via the HTTP Last-Modified header
+      const lastModifiedHeader = response.headers.get('Last-Modified');
+      if (lastModifiedHeader) {
+        const fileTimeMs = new Date(lastModifiedHeader).getTime();
+        const ageMs = Date.now() - fileTimeMs;
+
+        if (!isNaN(fileTimeMs) && ageMs > MAX_AGE_MS) {
+          if (feedContainer) {
+            feedContainer.innerHTML = '<p style="color: #888; font-style: italic;">The live microstructure feed is currently inactive.</p>';
+          }
+          if (timeDisplay) {
+            timeDisplay.textContent = new Date().toLocaleTimeString();
+          }
+          return;
+        }
       }
 
       const htmlContent = await response.text();
