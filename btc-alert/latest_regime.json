@@ -1,14 +1,14 @@
 {
-  "timestamp": 1793942733,
-  "price": 75419.6,
-  "poc": 75600.0,
+  "timestamp": 1794091739,
+  "price": 75778.28,
+  "poc": 75750.0,
   "vah": 75800.0,
-  "val": 75550.0,
-  "spot_cvd": -198.9633,
-  "perp_cvd": -180.144,
-  "divergence": -18.8193,
-  "regime": "Spot-Led Expansion",
-  "uncertainty": "Low",
-  "summary": "Aggressive spot-led selling has forced price below the Value Area Low of 75,550, backed by aligned negative spot and perpetual CVD deltas. This strong net-selling conviction maintains a bearish expansion bias while price trades outside the established value area.",
-  "risk": "Short-covering squeeze forcing price back above Value Area Low (75,550) towards POC (75,600)."
+  "val": 75700.0,
+  "spot_cvd": 2.1751,
+  "perp_cvd": -22.07,
+  "divergence": 24.245,
+  "regime": "Mean Reverting / Consolidation",
+  "uncertainty": "High",
+  "summary": "Price rotating inside Value Area near POC ($75,750.00). Spot CVD delta is positive (+2.18 BTC).",
+  "risk": "Range chop between VAL ($75,700.00) and VAH ($75,800.00)."
 }
