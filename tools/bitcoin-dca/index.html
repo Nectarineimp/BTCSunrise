@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bitcoin DCA &amp; Recovery Projection Simulator</title>
+  <!-- 
+    ==========================================================================
+    EMBEDDING GUIDE FOR JEKYLL / GITHUB PAGES / STATIC SITES:
+    To embed this widget directly into a Markdown post or HTML layout:
+    1. Copy everything inside <style>...</style>, the <div class="btc-dca-widget">...</div> 
+       container, and the <script>...</script> block.
+    2. All CSS is strictly scoped under `.btc-dca-widget` so it will not clash 
+       with your existing site typography, headers, or layout styles.
+    3. Zero external JS/CDN dependencies are used, ensuring 100% reliability.
+    ==========================================================================
+  -->
+  <style>
+    /* Page wrapper styling (only affects standalone viewing, not the embed container) */
+    body {
+      margin: 0;
+      padding: 24px 16px;
+      background-color: #090b10;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* ==========================================================================
+       SCOPED WIDGET DESIGN TOKENS (Dark Financial Editorial Theme - Default)
+       ========================================================================== */
+    .btc-dca-widget {
+      --bg-surface: #11151f;
+      --bg-elevated: #181e2c;
+      --bg-input: #0d1119;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.16);
+      --text-primary: #f3f5f9;
+      --text-secondary: #9ba3b5;
+      --text-muted: #687185;
+      
+      /* Financial & Bitcoin Accent Palette */
+      --accent-btc: #f7931a;
+      --accent-btc-soft: rgba(247, 147, 26, 0.16);
+      --accent-positive: #10b981;
+      --accent-positive-soft: rgba(16, 185, 129, 0.15);
+      --accent-secondary: #60a5fa;
+      
+      /* Chart Specific Colors */
+      --chart-grid: rgba(255, 255, 255, 0.06);
+      --chart-axis-text: #8892a6;
+      --chart-dca-line: #f7931a;
+      --chart-dca-fill-top: rgba(247, 147, 26, 0.28);
+      --chart-dca-fill-bottom: rgba(247, 147, 26, 0.0);
+      --chart-hold-line: #60a5fa;
+      --chart-principal-line: #64748b;
+      --tooltip-bg: rgba(13, 17, 25, 0.96);
+
+      /* Layout & Typography */
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-primary);
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.55);
+      width: 100%;
+      max-width: 880px;
+      padding: 28px;
+      box-sizing: border-box;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    /* ==========================================================================
+       LIGHT EDITORIAL THEME (Ideal for crisp white/paper Jekyll blog pages)
+       Activate by adding `data-theme="light"` to `.btc-dca-widget` or toggling UI
+       ========================================================================== */
+    .btc-dca-widget[data-theme="light"] {
+      --bg-surface: #ffffff;
+      --bg-elevated: #f8fafc;
+      --bg-input: #f1f5f9;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+
+      --accent-btc: #e07b08;
+      --accent-btc-soft: rgba(247, 147, 26, 0.14);
+      --accent-positive: #059669;
+      --accent-positive-soft: rgba(5, 150, 105, 0.12);
+      --accent-secondary: #2563eb;
+
+      --chart-grid: rgba(15, 23, 42, 0.07);
+      --chart-axis-text: #64748b;
+      --chart-dca-line: #ea580c;
+      --chart-dca-fill-top: rgba(234, 88, 12, 0.20);
+      --chart-dca-fill-bottom: rgba(234, 88, 12, 0.0);
+      --chart-hold-line: #2563eb;
+      --chart-principal-line: #94a3b8;
+      --tooltip-bg: rgba(255, 255, 255, 0.97);
+
+      box-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.08);
+    }
+
+    .btc-dca-widget *,
+    .btc-dca-widget *::before,
+    .btc-dca-widget *::after {
+      box-sizing: border-box;
+    }
+
+    /* Header Bar */
+    .btc-dca-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btc-dca-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .btc-dca-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-btc);
+      background: var(--accent-btc-soft);
+      padding: 4px 10px;
+      border-radius: 999px;
+      width: fit-content;
+      margin-bottom: 4px;
+    }
+
+    .btc-dca-title {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      color: var(--text-primary);
+    }
+
+    .btc-dca-subtitle {
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    /* Header Controls (Theme Toggle & Reset) */
+    .btc-dca-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btc-dca-btn {
+      appearance: none;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.18s ease;
+    }
+
+    .btc-dca-btn:hover {
+      border-color: var(--border-strong);
+      color: var(--text-primary);
+      transform: translateY(-1px);
+    }
+
+    .btc-dca-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Summary KPI Cards */
+    .btc-dca-kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .btc-dca-kpi-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: border-color 0.2s ease;
+    }
+
+    .btc-dca-kpi-card.highlight {
+      border-color: rgba(247, 147, 26, 0.35);
+      background: linear-gradient(180deg, var(--accent-btc-soft) 0%, var(--bg-elevated) 100%);
+    }
+
+    .btc-dca-kpi-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .btc-dca-kpi-value {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-primary);
+    }
+
+    .btc-dca-kpi-card.highlight .btc-dca-kpi-value {
+      color: var(--accent-btc);
+    }
+
+    .btc-dca-kpi-sub {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--accent-positive);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .btc-dca-kpi-sub.neutral {
+      color: var(--text-muted);
+    }
+
+    /* Main Content Split: Chart + Controls */
+    .btc-dca-body {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    /* Interactive Chart Panel */
+    .btc-dca-chart-panel {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      min-width: 0;
+    }
+
+    .btc-dca-legend {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .btc-dca-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .btc-dca-swatch {
+      width: 12px;
+      height: 3px;
+      border-radius: 2px;
+    }
+
+    .btc-dca-swatch.dca {
+      background: var(--chart-dca-line);
+      height: 3.5px;
+    }
+
+    .btc-dca-swatch.hold {
+      background: var(--chart-hold-line);
+    }
+
+    .btc-dca-swatch.principal {
+      border-top: 2px dashed var(--chart-principal-line);
+      background: transparent;
+      height: 0;
+    }
+
+    .btc-dca-canvas-wrap {
+      position: relative;
+      width: 100%;
+      height: 290px;
+      touch-action: pan-y;
+    }
+
+    .btc-dca-canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: crosshair;
+    }
+
+    /* Floating Hover/Touch Crosshair Tooltip */
+    .btc-dca-tooltip {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--tooltip-bg);
+      border: 1px solid var(--border-strong);
+      border-radius: 10px;
+      padding: 10px 12px;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.14s ease, transform 0.14s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      z-index: 10;
+      min-width: 195px;
+      backdrop-filter: blur(6px);
+    }
+
+    .btc-dca-tooltip.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .btc-dca-tt-header {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .btc-dca-tt-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      margin-top: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .btc-dca-tt-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-secondary);
+    }
+
+    .btc-dca-tt-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+
+    .btc-dca-tt-val {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* Controls Sidebar */
+    .btc-dca-controls {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .btc-dca-controls-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      margin: 0 0 2px 0;
+    }
+
+    .btc-dca-control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btc-dca-control-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btc-dca-control-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    /* Interactive Numeric Input Badge */
+    .btc-dca-value-badge {
+      display: inline-flex;
+      align-items: center;
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 3px 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-btc);
+      font-variant-numeric: tabular-nums;
+      transition: border-color 0.15s ease;
+    }
+
+    .btc-dca-value-badge:focus-within {
+      border-color: var(--accent-btc);
+    }
+
+    .btc-dca-num-input {
+      background: transparent;
+      border: none;
+      color: inherit;
+      font: inherit;
+      width: 58px;
+      text-align: right;
+      outline: none;
+      padding: 0;
+      margin: 0;
+      -moz-appearance: textfield;
+    }
+
+    .btc-dca-num-input::-webkit-outer-spin-button,
+    .btc-dca-num-input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Custom Range Sliders */
+    .btc-dca-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--bg-input);
+      outline: none;
+      cursor: pointer;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .btc-dca-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent-btc);
+      border: 2px solid var(--bg-surface);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      transition: transform 0.12s ease;
+    }
+
+    .btc-dca-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.12);
+    }
+
+    .btc-dca-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent-btc);
+      border: 2px solid var(--bg-surface);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      transition: transform 0.12s ease;
+    }
+
+    .btc-dca-range-bounds {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Footer Note */
+    .btc-dca-footer {
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btc-dca-disclaimer {
+      margin: 0;
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 820px) {
+      .btc-dca-body {
+        grid-template-columns: 1fr;
+      }
+      .btc-dca-kpis {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btc-dca-widget {
+        padding: 18px 14px;
+        border-radius: 12px;
+      }
+      .btc-dca-title {
+        font-size: 19px;
+      }
+      .btc-dca-kpis {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .btc-dca-kpi-card {
+        padding: 12px;
+      }
+      .btc-dca-kpi-value {
+        font-size: 17px;
+      }
+      .btc-dca-canvas-wrap {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       STANDALONE / EMBEDDABLE WIDGET CONTAINER
+       Tip: Change data-theme="dark" to data-theme="light" for light blog pages
+       ======================================================================== -->
+  <div class="btc-dca-widget" id="btcDcaWidget" data-theme="dark">
+    
+    <!-- Header -->
+    <div class="btc-dca-header">
+      <div class="btc-dca-title-group">
+        <span class="btc-dca-badge">
+          <!-- Inline Bitcoin / Trend Icon SVG -->
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+          Interactive Accumulation Model
+        </span>
+        <h2 class="btc-dca-title">Bitcoin DCA &amp; Recovery Projection</h2>
+        <p class="btc-dca-subtitle">Compare steady monthly accumulation against holding an existing stack across multi-year horizons.</p>
+      </div>
+
+      <div class="btc-dca-actions">
+        <button type="button" class="btc-dca-btn" id="btcDcaResetBtn" title="Reset sliders to defaults">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+            <path d="M3 3v5h5"></path>
+          </svg>
+          Reset
+        </button>
+        <button type="button" class="btc-dca-btn" id="btcDcaThemeBtn" title="Toggle Dark/Light Theme">
+          <svg id="btcDcaThemeIcon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span id="btcDcaThemeLabel">Light Mode</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Summary Metric Cards -->
+    <div class="btc-dca-kpis">
+      <div class="btc-dca-kpi-card">
+        <span class="btc-dca-kpi-label">Starting Value</span>
+        <span class="btc-dca-kpi-value" id="kpiStarting">$2,500</span>
+        <span class="btc-dca-kpi-sub neutral">Initial BTC Stack</span>
+      </div>
+
+      <div class="btc-dca-kpi-card">
+        <span class="btc-dca-kpi-label">Total Principal</span>
+        <span class="btc-dca-kpi-value" id="kpiPrincipal">$12,100</span>
+        <span class="btc-dca-kpi-sub neutral" id="kpiPrincipalSub">+$9,600 added</span>
+      </div>
+
+      <div class="btc-dca-kpi-card">
+        <span class="btc-dca-kpi-label">Hold-Only Value</span>
+        <span class="btc-dca-kpi-value" id="kpiHold">$4,031</span>
+        <span class="btc-dca-kpi-sub" id="kpiHoldGain">+61.2% return</span>
+      </div>
+
+      <div class="btc-dca-kpi-card highlight">
+        <span class="btc-dca-kpi-label">Projected DCA Value</span>
+        <span class="btc-dca-kpi-value" id="kpiDca">$16,275</span>
+        <span class="btc-dca-kpi-sub" id="kpiDcaGain">+$4,175 net gain</span>
+      </div>
+    </div>
+
+    <!-- Main Chart + Sliders -->
+    <div class="btc-dca-body">
+      
+      <!-- Left: Custom HTML5 Canvas Line Chart -->
+      <div class="btc-dca-chart-panel">
+        <div class="btc-dca-legend">
+          <div class="btc-dca-legend-item">
+            <span class="btc-dca-swatch dca"></span>
+            <span>Continued DCA Strategy</span>
+          </div>
+          <div class="btc-dca-legend-item">
+            <span class="btc-dca-swatch hold"></span>
+            <span>Hold Existing Stack Only</span>
+          </div>
+          <div class="btc-dca-legend-item">
+            <span class="btc-dca-swatch principal"></span>
+            <span>Total Principal Contributed</span>
+          </div>
+        </div>
+
+        <div class="btc-dca-canvas-wrap" id="btcDcaCanvasWrap">
+          <canvas class="btc-dca-canvas" id="btcDcaCanvas"></canvas>
+          
+          <!-- Dynamic Crosshair Tooltip -->
+          <div class="btc-dca-tooltip" id="btcDcaTooltip">
+            <div class="btc-dca-tt-header" id="ttHeader">Year 2, Month 0</div>
+            <div class="btc-dca-tt-row">
+              <span class="btc-dca-tt-label">
+                <span class="btc-dca-tt-dot" style="background: var(--chart-dca-line);"></span>
+                Continued DCA
+              </span>
+              <span class="btc-dca-tt-val" id="ttDca">$0</span>
+            </div>
+            <div class="btc-dca-tt-row">
+              <span class="btc-dca-tt-label">
+                <span class="btc-dca-tt-dot" style="background: var(--chart-hold-line);"></span>
+                Hold Only
+              </span>
+              <span class="btc-dca-tt-val" id="ttHold">$0</span>
+            </div>
+            <div class="btc-dca-tt-row">
+              <span class="btc-dca-tt-label">
+                <span class="btc-dca-tt-dot" style="background: var(--chart-principal-line);"></span>
+                Principal Paid
+              </span>
+              <span class="btc-dca-tt-val" id="ttPrincipal">$0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Parameter Sliders & Direct Numeric Inputs -->
+      <div class="btc-dca-controls">
+        <h3 class="btc-dca-controls-title">Simulation Assumptions</h3>
+
+        <!-- 1. Current BTC Stack Value -->
+        <div class="btc-dca-control-group">
+          <div class="btc-dca-control-top">
+            <label class="btc-dca-control-label" for="sliderInitial">Current BTC stack</label>
+            <div class="btc-dca-value-badge">
+              <span>$</span>
+              <input type="number" id="inputInitial" class="btc-dca-num-input" value="2500" min="500" max="50000" step="500" aria-label="Current BTC stack value in dollars" />
+            </div>
+          </div>
+          <input type="range" id="sliderInitial" class="btc-dca-slider" value="2500" min="500" max="50000" step="500" />
+          <div class="btc-dca-range-bounds">
+            <span>$500</span>
+            <span>$50,000</span>
+          </div>
+        </div>
+
+        <!-- 2. Monthly DCA Contribution -->
+        <div class="btc-dca-control-group">
+          <div class="btc-dca-control-top">
+            <label class="btc-dca-control-label" for="sliderMonthly">Monthly DCA</label>
+            <div class="btc-dca-value-badge">
+              <span>$</span>
+              <input type="number" id="inputMonthly" class="btc-dca-num-input" value="200" min="0" max="2000" step="50" aria-label="Monthly DCA contribution in dollars" />
+            </div>
+          </div>
+          <input type="range" id="sliderMonthly" class="btc-dca-slider" value="200" min="0" max="2000" step="50" />
+          <div class="btc-dca-range-bounds">
+            <span>$0/mo</span>
+            <span>$2,000/mo</span>
+          </div>
+        </div>
+
+        <!-- 3. Annualized Return (%) -->
+        <div class="btc-dca-control-group">
+          <div class="btc-dca-control-top">
+            <label class="btc-dca-control-label" for="sliderRate">Annualized return</label>
+            <div class="btc-dca-value-badge">
+              <input type="number" id="inputRate" class="btc-dca-num-input" style="width: 34px;" value="12" min="0" max="40" step="1" aria-label="Annualized return percentage" />
+              <span>%</span>
+            </div>
+          </div>
+          <input type="range" id="sliderRate" class="btc-dca-slider" value="12" min="0" max="40" step="1" />
+          <div class="btc-dca-range-bounds">
+            <span>0%</span>
+            <span>40%</span>
+          </div>
+        </div>
+
+        <!-- 4. Time Horizon (Years) -->
+        <div class="btc-dca-control-group">
+          <div class="btc-dca-control-top">
+            <label class="btc-dca-control-label" for="sliderYears">Time horizon</label>
+            <div class="btc-dca-value-badge">
+              <input type="number" id="inputYears" class="btc-dca-num-input" style="width: 28px;" value="4" min="1" max="10" step="1" aria-label="Time horizon in years" />
+              <span>&nbsp;yrs</span>
+            </div>
+          </div>
+          <input type="range" id="sliderYears" class="btc-dca-slider" value="4" min="1" max="10" step="1" />
+          <div class="btc-dca-range-bounds">
+            <span>1 yr</span>
+            <span>10 yrs</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Disclaimer Footer -->
+    <div class="btc-dca-footer">
+      <p class="btc-dca-disclaimer">
+        *Illustrative compound growth simulation comparing steady DCA against holding a static position. Crypto assets experience severe multi-month volatility.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ========================================================================
+       SELF-CONTAINED SIMULATION & CANVAS RENDERING ENGINE
+       ======================================================================== -->
+  <script>
+    (function () {
+      "use strict";
+
+      // Default parameter values
+      const DEFAULTS = {
+        initial: 2500,
+        monthly: 200,
+        rate: 12,
+        years: 4
+      };
+
+      // Active state
+      const state = { ...DEFAULTS };
+      let dataPoints = [];
+      let hoverIndex = null;
+
+      // DOM References
+      const widget = document.getElementById("btcDcaWidget");
+      const canvasWrap = document.getElementById("btcDcaCanvasWrap");
+      const canvas = document.getElementById("btcDcaCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Tooltip Elements
+      const tooltip = document.getElementById("btcDcaTooltip");
+      const ttHeader = document.getElementById("ttHeader");
+      const ttDca = document.getElementById("ttDca");
+      const ttHold = document.getElementById("ttHold");
+      const ttPrincipal = document.getElementById("ttPrincipal");
+
+      // KPI Elements
+      const kpiStarting = document.getElementById("kpiStarting");
+      const kpiPrincipal = document.getElementById("kpiPrincipal");
+      const kpiPrincipalSub = document.getElementById("kpiPrincipalSub");
+      const kpiHold = document.getElementById("kpiHold");
+      const kpiHoldGain = document.getElementById("kpiHoldGain");
+      const kpiDca = document.getElementById("kpiDca");
+      const kpiDcaGain = document.getElementById("kpiDcaGain");
+
+      // Control Pairs (Slider + Direct Numeric Input)
+      const controls = [
+        { key: "initial", slider: document.getElementById("sliderInitial"), input: document.getElementById("inputInitial"), min: 500, max: 50000 },
+        { key: "monthly", slider: document.getElementById("sliderMonthly"), input: document.getElementById("inputMonthly"), min: 0, max: 2000 },
+        { key: "rate", slider: document.getElementById("sliderRate"), input: document.getElementById("inputRate"), min: 0, max: 40 },
+        { key: "years", slider: document.getElementById("sliderYears"), input: document.getElementById("inputYears"), min: 1, max: 10 }
+      ];
+
+      // Currency & Compact Axis Formatters
+      const currencyFormatter = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+        maximumFractionDigits: 0
+      });
+
+      function formatCurrency(val) {
+        return currencyFormatter.format(Math.round(val));
+      }
+
+      function formatAxisCurrency(val) {
+        if (val === 0) return "$0";
+        if (val >= 1000000) return "$" + (val / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+        if (val >= 1000) return "$" + (val / 1000).toFixed(0) + "k";
+        return "$" + Math.round(val);
+      }
+
+      /**
+       * Core Mathematical Model
+       * Evaluates monthly compounding from month m = 0 to years * 12 (where t = m / 12)
+       */
+      function computeProjection() {
+        const { initial, monthly, rate, years } = state;
+        const totalMonths = years * 12;
+        const monthlyRate = rate / 100 / 12;
+        const points = [];
+
+        for (let m = 0; m <= totalMonths; m++) {
+          const t = m / 12;
+          const growthFactor = Math.pow(1 + monthlyRate, m);
+
+          // Exact formula:
+          // rate > 0 ? initial * (1 + r/12)^(12t) + monthly * (((1 + r/12)^(12t) - 1) / (r/12)) : initial + monthly * 12 * t
+          const holdOnly = initial * growthFactor;
+          const dcaTotal = rate > 0
+            ? initial * growthFactor + monthly * ((growthFactor - 1) / monthlyRate)
+            : initial + monthly * 12 * t;
+          const principal = initial + monthly * 12 * t;
+
+          points.push({
+            month: m,
+            t,
+            dcaTotal,
+            holdOnly,
+            principal
+          });
+        }
+
+        dataPoints = points;
+      }
+
+      /**
+       * Updates the 4 top KPI summary cards
+       */
+      function updateKPIs() {
+        const finalPoint = dataPoints[dataPoints.length - 1];
+        const addedPrincipal = finalPoint.principal - state.initial;
+        const holdProfit = finalPoint.holdOnly - state.initial;
+        const holdPct = state.initial > 0 ? (holdProfit / state.initial) * 100 : 0;
+        const dcaNetGain = finalPoint.dcaTotal - finalPoint.principal;
+
+        kpiStarting.textContent = formatCurrency(state.initial);
+        kpiPrincipal.textContent = formatCurrency(finalPoint.principal);
+        kpiPrincipalSub.textContent = `+${formatCurrency(addedPrincipal)} added`;
+
+        kpiHold.textContent = formatCurrency(finalPoint.holdOnly);
+        kpiHoldGain.textContent = `+${holdPct.toFixed(1)}% growth`;
+
+        kpiDca.textContent = formatCurrency(finalPoint.dcaTotal);
+        kpiDcaGain.textContent = `+${formatCurrency(dcaNetGain)} compound gain`;
+      }
+
+      /**
+       * Reads active CSS custom properties so canvas colors automatically match Dark/Light mode
+       */
+      function getThemeColors() {
+        const styles = getComputedStyle(widget);
+        return {
+          grid: styles.getPropertyValue("--chart-grid").trim(),
+          axisText: styles.getPropertyValue("--chart-axis-text").trim(),
+          dcaLine: styles.getPropertyValue("--chart-dca-line").trim(),
+          dcaFillTop: styles.getPropertyValue("--chart-dca-fill-top").trim(),
+          dcaFillBottom: styles.getPropertyValue("--chart-dca-fill-bottom").trim(),
+          holdLine: styles.getPropertyValue("--chart-hold-line").trim(),
+          principalLine: styles.getPropertyValue("--chart-principal-line").trim(),
+          surface: styles.getPropertyValue("--bg-elevated").trim()
+        };
+      }
+
+      /**
+       * Renders the responsive high-DPI HTML5 Canvas chart
+       */
+      function drawChart() {
+        if (!dataPoints.length) return;
+
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvasWrap.getBoundingClientRect();
+        const width = rect.width;
+        const height = rect.height;
+
+        if (width <= 0 || height <= 0) return;
+
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.clearRect(0, 0, width, height);
+
+        const colors = getThemeColors();
+        const pad = { top: 16, right: 16, bottom: 28, left: 54 };
+        const plotW = width - pad.left - pad.right;
+        const plotH = height - pad.top - pad.bottom;
+
+        // Determine nice Y-axis upper bound
+        const maxVal = Math.max(...dataPoints.map(d => d.dcaTotal), 1000);
+        const rawStep = maxVal / 4;
+        const magnitude = Math.pow(10, Math.floor(Math.log10(rawStep)));
+        const niceStep = Math.ceil(rawStep / magnitude) * magnitude;
+        const yMax = niceStep * 4;
+
+        const getX = (index) => pad.left + (index / (dataPoints.length - 1)) * plotW;
+        const getY = (val) => pad.top + plotH - (val / yMax) * plotH;
+
+        // 1. Horizontal Gridlines & Y-Axis Labels
+        ctx.font = '500 11px -apple-system, BlinkMacSystemFont, "Inter", sans-serif';
+        ctx.textAlign = "right";
+        ctx.textBaseline = "middle";
+
+        for (let i = 0; i <= 4; i++) {
+          const val = niceStep * i;
+          const y = getY(val);
+
+          ctx.beginPath();
+          ctx.strokeStyle = colors.grid;
+          ctx.lineWidth = 1;
+          ctx.moveTo(pad.left, y);
+          ctx.lineTo(width - pad.right, y);
+          ctx.stroke();
+
+          ctx.fillStyle = colors.axisText;
+          ctx.fillText(formatAxisCurrency(val), pad.left - 8, y);
+        }
+
+        // 2. X-Axis Year Ticks
+        ctx.textAlign = "center";
+        ctx.textBaseline = "top";
+        const totalYears = state.years;
+        const yearStep = totalYears > 6 ? 2 : 1;
+
+        for (let yr = 0; yr <= totalYears; yr += yearStep) {
+          const idx = yr * 12;
+          if (idx < dataPoints.length) {
+            const x = getX(idx);
+            ctx.fillStyle = colors.axisText;
+            ctx.fillText(yr === 0 ? "Now" : `Yr ${yr}`, x, pad.top + plotH + 8);
+          }
+        }
+
+        // 3. Area Fill under Continued DCA Curve
+        const gradient = ctx.createLinearGradient(0, pad.top, 0, pad.top + plotH);
+        gradient.addColorStop(0, colors.dcaFillTop);
+        gradient.addColorStop(1, colors.dcaFillBottom);
+
+        ctx.beginPath();
+        dataPoints.forEach((pt, i) => {
+          const x = getX(i);
+          const y = getY(pt.dcaTotal);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.lineTo(getX(dataPoints.length - 1), pad.top + plotH);
+        ctx.lineTo(getX(0), pad.top + plotH);
+        ctx.closePath();
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+        // 4. Total Principal Line (Dashed)
+        ctx.beginPath();
+        ctx.setLineDash([4, 4]);
+        ctx.strokeStyle = colors.principalLine;
+        ctx.lineWidth = 1.75;
+        dataPoints.forEach((pt, i) => {
+          const x = getX(i);
+          const y = getY(pt.principal);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // 5. Hold Existing Stack Line
+        ctx.beginPath();
+        ctx.strokeStyle = colors.holdLine;
+        ctx.lineWidth = 2.25;
+        ctx.lineJoin = "round";
+        dataPoints.forEach((pt, i) => {
+          const x = getX(i);
+          const y = getY(pt.holdOnly);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+
+        // 6. Continued DCA Primary Line
+        ctx.beginPath();
+        ctx.strokeStyle = colors.dcaLine;
+        ctx.lineWidth = 2.75;
+        ctx.lineJoin = "round";
+        dataPoints.forEach((pt, i) => {
+          const x = getX(i);
+          const y = getY(pt.dcaTotal);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+
+        // 7. Interactive Crosshair & Data Dots on Hover/Touch
+        if (hoverIndex !== null && dataPoints[hoverIndex]) {
+          const pt = dataPoints[hoverIndex];
+          const hx = getX(hoverIndex);
+
+          // Vertical guide line
+          ctx.beginPath();
+          ctx.setLineDash([3, 3]);
+          ctx.strokeStyle = colors.axisText;
+          ctx.lineWidth = 1;
+          ctx.moveTo(hx, pad.top);
+          ctx.lineTo(hx, pad.top + plotH);
+          ctx.stroke();
+          ctx.setLineDash([]);
+
+          // Helper to draw point marker
+          const drawDot = (val, color) => {
+            const hy = getY(val);
+            ctx.beginPath();
+            ctx.arc(hx, hy, 4.5, 0, Math.PI * 2);
+            ctx.fillStyle = color;
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = colors.surface;
+            ctx.stroke();
+          };
+
+          drawDot(pt.principal, colors.principalLine);
+          drawDot(pt.holdOnly, colors.holdLine);
+          drawDot(pt.dcaTotal, colors.dcaLine);
+        }
+      }
+
+      /**
+       * Handles pointer/touch movement over canvas to update crosshair tooltip
+       */
+      function handlePointerMove(clientX) {
+        if (!dataPoints.length) return;
+        const rect = canvasWrap.getBoundingClientRect();
+        const padLeft = 54;
+        const padRight = 16;
+        const plotW = rect.width - padLeft - padRight;
+
+        const relX = clientX - rect.left - padLeft;
+        const ratio = Math.max(0, Math.min(1, relX / plotW));
+        const idx = Math.round(ratio * (dataPoints.length - 1));
+
+        hoverIndex = idx;
+        const pt = dataPoints[idx];
+
+        const yr = Math.floor(pt.month / 12);
+        const mo = pt.month % 12;
+        ttHeader.textContent = pt.month === 0
+          ? "Starting Point (Month 0)"
+          : `Year ${yr}, Month ${mo} (${pt.month} mos)`;
+
+        ttDca.textContent = formatCurrency(pt.dcaTotal);
+        ttHold.textContent = formatCurrency(pt.holdOnly);
+        ttPrincipal.textContent = formatCurrency(pt.principal);
+
+        // Smart tooltip positioning so it stays inside the chart bounds
+        const markerX = padLeft + (idx / (dataPoints.length - 1)) * plotW;
+        const tooltipWidth = 205;
+        const placeLeft = markerX + tooltipWidth + 20 > rect.width;
+        tooltip.style.left = placeLeft
+          ? `${Math.max(8, markerX - tooltipWidth - 14)}px`
+          : `${markerX + 14}px`;
+
+        tooltip.classList.add("visible");
+        drawChart();
+      }
+
+      function clearHover() {
+        hoverIndex = null;
+        tooltip.classList.remove("visible");
+        drawChart();
+      }
+
+      // Mouse & Touch Event Listeners for Canvas
+      canvas.addEventListener("mousemove", (e) => handlePointerMove(e.clientX));
+      canvas.addEventListener("mouseleave", clearHover);
+
+      canvas.addEventListener("touchstart", (e) => {
+        if (e.touches.length > 0) handlePointerMove(e.touches[0].clientX);
+      }, { passive: true });
+
+      canvas.addEventListener("touchmove", (e) => {
+        if (e.touches.length > 0) handlePointerMove(e.touches[0].clientX);
+      }, { passive: true });
+
+      canvas.addEventListener("touchend", clearHover);
+
+      /**
+       * Recalculates and re-renders everything
+       */
+      function refreshAll() {
+        computeProjection();
+        updateKPIs();
+        drawChart();
+      }
+
+      // Sync Sliders and Direct Numeric Inputs
+      controls.forEach(({ key, slider, input, min, max }) => {
+        slider.addEventListener("input", () => {
+          const val = parseFloat(slider.value);
+          state[key] = val;
+          input.value = val;
+          refreshAll();
+        });
+
+        input.addEventListener("input", () => {
+          let val = parseFloat(input.value);
+          if (isNaN(val)) return;
+          val = Math.max(min, Math.min(max, val));
+          state[key] = val;
+          slider.value = val;
+          refreshAll();
+        });
+
+        input.addEventListener("blur", () => {
+          let val = parseFloat(input.value);
+          if (isNaN(val)) val = DEFAULTS[key];
+          val = Math.max(min, Math.min(max, val));
+          state[key] = val;
+          input.value = val;
+          slider.value = val;
+          refreshAll();
+        });
+      });
+
+      // Reset Button
+      document.getElementById("btcDcaResetBtn").addEventListener("click", () => {
+        Object.assign(state, DEFAULTS);
+        controls.forEach(({ key, slider, input }) => {
+          slider.value = state[key];
+          input.value = state[key];
+        });
+        refreshAll();
+      });
+
+      // Dark / Light Theme Toggle Button
+      const themeBtn = document.getElementById("btcDcaThemeBtn");
+      const themeLabel = document.getElementById("btcDcaThemeLabel");
+
+      themeBtn.addEventListener("click", () => {
+        const isDark = widget.getAttribute("data-theme") === "dark";
+        const nextTheme = isDark ? "light" : "dark";
+        widget.setAttribute("data-theme", nextTheme);
+        themeLabel.textContent = nextTheme === "dark" ? "Light Mode" : "Dark Mode";
+
+        // Match standalone page background nicely if viewed directly
+        if (document.body.children.length === 1) {
+          document.body.style.backgroundColor = nextTheme === "dark" ? "#090b10" : "#f1f5f9";
+        }
+        drawChart();
+      });
+
+      // Responsive Resize Observer
+      if (typeof ResizeObserver !== "undefined") {
+        const ro = new ResizeObserver(() => drawChart());
+        ro.observe(canvasWrap);
+      } else {
+        window.addEventListener("resize", drawChart);
+      }
+
+      // Initial Boot
+      window.addEventListener("load", refreshAll);
+      refreshAll();
+    })();
+  </script>
+</body>
+</html>
