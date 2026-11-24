@@ -1,14 +1,18 @@
 {
-  "timestamp": 1795039850,
-  "price": 62400.6,
-  "poc": 62400.0,
-  "vah": 62500.0,
-  "val": 62300.0,
-  "spot_cvd": 79.4316,
-  "perp_cvd": -286.643,
-  "divergence": 366.0746,
+  "timestamp": 1795525963,
+  "price": 60054.13,
+  "poc": 60400.0,
+  "vah": 60500.0,
+  "val": 60200.0,
+  "spot_cvd": -2.6505,
+  "perp_cvd": -93.759,
+  "divergence": 91.1085,
+  "daily_rsi": 26.49,
+  "rsi_delta": 1.31,
+  "provisional_rsi": 24.78,
   "regime": "Leverage Squeeze / Exhaustion Risk",
   "uncertainty": "Medium",
-  "summary": "Price has pushed below VAL driven by heavy perp market selling, yet spot CVD remains positive indicating passive bid absorption. This derivative-led breakdown paired with spot divergence raises significant short exhaustion and mean-reversion risk.",
-  "risk": "Perp short aggression overwhelming passive spot absorption and confirming acceptance below VAL."
+  "summary": "Price testing liquidity below VAL at $60,054.13. Delta volume lacks high-conviction institutional participation.",
+  "risk": "Mean-reversion trap back toward Value Area POC ($60,400.00).",
+  "rsi_label": "Oversold"
 }
